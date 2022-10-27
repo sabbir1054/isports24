@@ -18,7 +18,10 @@ const LiveScore = () => {
             <h4>Bangladesh *</h4>
           </Col>
           <Col md={6}>
-            <h2 className="text-center "> 172 / 2</h2>
+            <h2 className="text-center ">
+              {" "}
+              172 / 2 <span className="fs-6">{` (6.5)`}</span>
+            </h2>
           </Col>
         </Row>
         <hr className="text-white" />
