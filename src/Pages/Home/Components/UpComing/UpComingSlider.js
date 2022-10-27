@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 const UpComingSlider = () => {
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: false,
     speed: 500,
     slidesToShow: 5,

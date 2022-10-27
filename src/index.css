@@ -7,7 +7,7 @@
 }
 :root {
   --primary-color: #fd2626;
-  --secondary-color: #d4d0d0;
+  --secondary-color: #fff;
   --optional-color: black;
 }
 h1,
@@ -17,7 +17,7 @@ h4,
 h5,
 h6 {
   font-family: "Titillium Web", sans-serif;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 p,
 span {
@@ -57,4 +57,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Running match tabs */
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: var(--secondary-color) !important;
+  background-color: var(--primary-color);
+  border-color: var(--bs-nav-tabs-link-active-border-color);
 }

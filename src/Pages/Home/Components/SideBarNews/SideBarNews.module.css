@@ -1,0 +1,25 @@
+.latestNews_wrapper{
+    padding: 2vh 0;
+    /* width: 90%; */
+    /* background-color: black; */
+}
+.latestNews_wrapper h2{
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.latestNews_wrapper h4{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.latestNews_wrapper h4:hover{
+    color: var(--primary-color);
+}
+.latestNews_wrapper p:hover{
+    text-decoration: underline;
+}
+.singleNews{
+    border-bottom: 1px solid rgb(56, 56, 56);
+    padding-bottom: 2px;
+    padding-top: 5px;
+}

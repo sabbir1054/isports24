@@ -1,0 +1,32 @@
+.matchNavigation_wrapper {
+  background-color: var(--optional-color);
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+.matchNavigation_wrapper button {
+  color: var(--primary-color) !important;
+}
+
+.runningMatch_wrapper {
+  background-image: url("../../../../assets/bgpng.png");
+  background-position: center;
+}
+.singleTab_wrapper {
+  padding: 5vh;
+}
+
+/* Live score */
+.liveScore_wrapper{
+  padding-bottom: 10vh;
+}
+.teamName{
+  border-bottom: 1px solid var(--secondary-color);
+}
+.vs_style{
+  font-size: 32px;
+  border: 2px solid white;
+  margin: 0 8px 5px 5px ;
+  padding: 4px 10px  ;
+  border-radius: 50%;
+}

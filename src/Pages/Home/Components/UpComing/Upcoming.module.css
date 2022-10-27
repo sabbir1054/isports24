@@ -3,4 +3,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: black;
+}
+.upcoming_wrapper h3{
+    color: var(--secondary-color);
+    font-weight: bold;
+  
 }
