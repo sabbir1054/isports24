@@ -13,3 +13,14 @@
 .navBar_wrapper{
     background-color: black;
 }
+
+
+.nav_link_activate{
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  text-decoration: none !important;
+  color: var(--secondary-color) !important;
+  font-size: 18px;
+  transition: all 0.3 ease-out;
+  
+}

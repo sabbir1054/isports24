@@ -1,0 +1,29 @@
+.sidebar_bg {
+  background-image: url("../../../../assets/sidebar_news.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper {
+  background-color: var(--optional-color);
+}
+.accordion_item {
+  color: gray !important;
+  background-color: black !important;
+  border: 1px solid rgba(114, 114, 114, 0.377);
+}
+.accordion_header button {
+  background-color: var(--optional-color) !important;
+}
+
+.singleMatch_wrapper {
+  background-color: #111111;
+  /* background-color: #222222; */
+  /* color: gray; */
+}
+.singleMatch_wrapper {
+  transition: all 0.3s ease-in-out;
+}
+.singleMatch_wrapper:hover {
+  background-color: #222222;
+  cursor: pointer;
+}
