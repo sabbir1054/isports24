@@ -55,7 +55,7 @@ const NavigationBar = () => {
 
               <Nav.Link>
                 <NavLink
-                  to="/cricket"
+                  to="/cricket/list-live"
                   className={
                     path == "/cricket"
                       ? `${styles.nav_link_activate}`

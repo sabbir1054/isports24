@@ -14,6 +14,8 @@ function App() {
       <Route path="/football/list-live" element={<Football />} />
       <Route path="/football/allMatches/:date" element={<Football />} />
       <Route path="/cricket" element={<Cricket />} />
+      <Route path="/cricket/list-live" element={<Cricket />} />
+      <Route path="/cricket/allMatches/:date" element={<Cricket />} />
       {/* <Route path="/cricket/:cricketEndpoints" element={<Cricket />} /> */}
       <Route path="/news" element={<NewsPage />} />
       <Route path="/*" element={<NotFound />} />

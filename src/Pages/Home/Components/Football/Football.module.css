@@ -17,8 +17,7 @@
 
 .singleMatch_wrapper {
   background-color: #111111;
-  /* background-color: #222222; */
-  /* color: gray; */
+  border: 0px solid red;
 }
 .singleMatch_wrapper {
   transition: all 0.3s ease-in-out;
@@ -26,4 +25,6 @@
 .singleMatch_wrapper:hover {
   background-color: #222222;
   cursor: pointer;
+  border: 1px solid red;
 }
+

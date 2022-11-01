@@ -4,6 +4,7 @@ import NavigationBar from "../../../Shared/Navbar/NavigationBar";
 import DateNavBar from "../Football/DateNavbar/DateNavBar";
 import SideBarNews from "../SideBarNews/SideBarNews";
 import styles from "./Cricket.module.css";
+import DateNavCricket from "./DateNavCricket/DateNavCricket";
 
 const Cricket = () => {
   return (
@@ -14,7 +15,7 @@ const Cricket = () => {
         <Container>
           <Row className="w-100 g-0">
             <Col md={8}>
-              <DateNavBar />
+              <DateNavCricket/>
             </Col>
             <Col md={4} className={`${styles.sidebar_bg} g-0`}>
               <Container>

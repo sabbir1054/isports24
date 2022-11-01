@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { Calendar } from "react-calendar";
-import "react-calendar/dist/Calendar.css";
 import { FcCalendar } from "react-icons/fc";
 import { GoSearch } from "react-icons/go";
-
 import { NavLink, useLocation } from "react-router-dom";
-import AllFMatches from "../AllMatches/AllFMatches";
-import styles from "./DateNavBar.module.css";
+import AllFMatches from "../../Football/AllMatches/AllFMatches";
+import styles from "./DateNavCricket.module.css";
 import {
   day1Nav,
   day1Str,
@@ -18,7 +16,7 @@ import {
   day5Str,
 } from "./MakeDate";
 
-const DateNavBar = () => {
+const DateNavCricket = () => {
   const location = useLocation();
   const path = location.pathname;
   const [activateLink, setActivateLink] = useState(`${location.pathname}`);
@@ -27,24 +25,26 @@ const DateNavBar = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [value, onChange] = useState(new Date());
+  /* Show custom select button */
+  const [showCustom, setShowCustom] = useState(false);
   //custom date select
   const dateString =
     String(value.getFullYear()) +
     String(value.getMonth() + 1) +
     String(value.getDate());
-
+  const customDate_broke = String(value).split(" ");
   const colorChange = (idName) => {
+    console.log(idName);
     setActivateLink(idName);
   };
   //make link and params for  get data
   const broken_link = activateLink.split("/");
 
-
+  console.log(activateLink);
 
   useEffect(() => {
     //set color
     setActivateLink(location.pathname);
-   
   }, [activateLink, value]);
   // console.log(dateString);
 
@@ -53,10 +53,10 @@ const DateNavBar = () => {
       <ul className="list-unstyled d-flex mt-3">
         <li onClick={() => colorChange("list-live")}>
           <NavLink
-            to="/football/list-live"
+            to="/cricket/list-live"
             id="list-live"
             className={`btn text-secondary ${
-              activateLink === "/football/list-live"
+              activateLink === "/cricket/list-live"
                 ? styles.active
                 : styles.dateNav_link
             }`}
@@ -66,10 +66,10 @@ const DateNavBar = () => {
         </li>
         <li onClick={() => colorChange("day1")}>
           <NavLink
-            to={`/football/allMatches/${day1Str}`}
+            to={`/cricket/allMatches/${day1Str}`}
             id="day1"
             className={`btn text-secondary ${
-              activateLink === `/football/allMatches/${day1Str}`
+              activateLink === `/cricket/allMatches/${day1Str}`
                 ? styles.active
                 : styles.dateNav_link
             }`}
@@ -79,10 +79,10 @@ const DateNavBar = () => {
         </li>
         <li onClick={() => colorChange("day2")}>
           <NavLink
-            to={`/football/allMatches/${day2Str}`}
+            to={`/cricket/allMatches/${day2Str}`}
             id="day2"
             className={`btn text-secondary ${
-              activateLink === `/football/allMatches/${day2Str}`
+              activateLink === `/cricket/allMatches/${day2Str}`
                 ? styles.active
                 : styles.dateNav_link
             }`}
@@ -92,10 +92,10 @@ const DateNavBar = () => {
         </li>
         <li onClick={() => colorChange("day3")}>
           <NavLink
-            to={`/football/allMatches/${day3Str}`}
+            to={`/cricket/allMatches/${day3Str}`}
             id="day3"
             className={`btn text-secondary ${
-              activateLink === `/football/allMatches/${day3Str}`
+              activateLink === `/cricket/allMatches/${day3Str}`
                 ? styles.active
                 : styles.dateNav_link
             }`}
@@ -105,10 +105,10 @@ const DateNavBar = () => {
         </li>
         <li onClick={() => colorChange("day4")}>
           <NavLink
-            to={`/football/allMatches/${day4Str}`}
+            to={`/cricket/allMatches/${day4Str}`}
             id="day4"
             className={`btn text-secondary ${
-              activateLink === `/football/allMatches/${day4Str}`
+              activateLink === `/cricket/allMatches/${day4Str}`
                 ? styles.active
                 : styles.dateNav_link
             }`}
@@ -118,10 +118,10 @@ const DateNavBar = () => {
         </li>
         <li onClick={() => colorChange("day5")}>
           <NavLink
-            to={`/football/allMatches/${day5Str}`}
+            to={`/cricket/allMatches/${day5Str}`}
             id="day5"
             className={`btn text-secondary ${
-              activateLink === `/football/allMatches/${day5Str}`
+              activateLink === `/cricket/allMatches/${day5Str}`
                 ? styles.active
                 : styles.dateNav_link
             }`}
@@ -129,6 +129,7 @@ const DateNavBar = () => {
             {day5Nav[0] + ` ` + day5Nav[2] + ` ` + day5Nav[1]}
           </NavLink>
         </li>
+
         <li onClick={() => setShow(true)} className={styles.calendar_btn}>
           <FcCalendar className="fs-3 mt-1" />
         </li>
@@ -142,17 +143,16 @@ const DateNavBar = () => {
           <Calendar onChange={onChange} value={value} className="" />
         </Modal.Body>
         <Modal.Footer>
-          <NavLink to={`/football/allMatches/${dateString}`}>
+          <NavLink to={`/cricket/allMatches/${dateString}`}>
             <Button variant="primary" onClick={handleClose}>
               Search <GoSearch />
             </Button>
           </NavLink>
         </Modal.Footer>
       </Modal>
-
       <AllFMatches />
     </div>
   );
 };
 
-export default DateNavBar;
+export default DateNavCricket;

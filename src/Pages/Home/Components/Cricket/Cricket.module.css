@@ -3,7 +3,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.wrapper{
+.wrapper {
   background-color: var(--optional-color);
   /* background-color: #111111; */
+}
+
+.singleMatch_container {
+  border: 0x;
+}
+.singleMatch_container:hover {
+  border: 1px solid read;
 }

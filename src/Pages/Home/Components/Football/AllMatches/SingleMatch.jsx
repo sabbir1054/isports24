@@ -29,7 +29,7 @@ const SingleMatch = ({ singleMatch }) => {
                 </p>
               </Col>
               <Col className="text-end">
-                <p>{singleMatch.Tr2}</p>
+                <p>{singleMatch.Tr1}</p>
               </Col>
               {/* Team 2 */}
             </Row>

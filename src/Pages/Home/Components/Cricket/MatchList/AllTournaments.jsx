@@ -1,25 +1,25 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import Loader from "../../../../Loader/Loader";
-import SingleLeague from "./SingleLeague";
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
-const AllFMatches = () => {
+const AllTournaments = () => {
   const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
   const broken_link = location.pathname.split("/");
   console.log(broken_link);
   const [data, setData] = useState([]);
-  
-  const linkParams1 = { Category: `${broken_link[1]=="football"?"soccer":"cricket"}`, Timezone: "6" };
+
+  const linkParams1 = {
+    Category: `${broken_link[1] == "football" ? "soccer" : "cricket"}`,
+    Timezone: "6",
+  };
   const linkParams2 = {
     Category: `${broken_link[1] == "football" ? "soccer" : "cricket"}`,
     Date: `${broken_link[3]}`,
     Timezone: "6",
   };
-  
+
   useEffect(() => {
-    setIsLoading(true)
+    setIsLoading(true);
     const options = {
       method: "GET",
       url: `https://livescore6.p.rapidapi.com/matches/v2/${
@@ -32,7 +32,7 @@ const AllFMatches = () => {
       },
     };
 
-    axios
+    /*  axios
       .request(options)
       .then(function (response) {
         setIsLoading(true);
@@ -42,31 +42,15 @@ const AllFMatches = () => {
       })
       .catch(function (error) {
         console.error(error);
-      });
-    // console.log(options);
+      }); */
+    console.log(options);
   }, [location.pathname]);
 
   /*   data.map((single) => {
     console.log(single.Snm);
   });
  */
-  return (
-    <div>
-      {/* {data.map((league) => (
-        //   <h3>{league.Snm}</h3>
-        <SingleLeague league={league} />
-      ))} */}
-      {isLoading  ? (
-        <Loader />
-      ) : (
-        data.map((league) => (
-          //   <h3>{league.Snm}</h3>
-          <SingleLeague league={league} />
-        ))
-      )} 
-      {/* <Loader/> */}
-    </div>
-  );
-};
+  return <div></div>;
+};;
 
-export default AllFMatches;
+export default AllTournaments;

@@ -1,0 +1,23 @@
+.dateNav_link {
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(194, 194, 194);
+  padding: 5px 15px;
+  margin: 0px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.384);
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+/* .dateNav_link:hover{
+    background-color: var(--secondary-color);
+    color: var(--optional-color);
+} */
+.active{
+    background-color: var(--secondary-color) !important;
+    color: var(--optional-color) !important;
+    font-weight: bold;
+}
+
+.calendar_btn{
+  cursor: pointer;
+}

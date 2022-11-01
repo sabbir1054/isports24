@@ -23,7 +23,7 @@ const Football = () => {
           </Row>
         </Container>
       </main>
-      This is home page
+      
     </div>
   );
 };
