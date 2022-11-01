@@ -1,0 +1,4 @@
+.newsWrapper{
+    height: 100vh;
+    background-color: var(--optional-color);
+}

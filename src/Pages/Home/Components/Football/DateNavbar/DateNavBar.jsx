@@ -42,8 +42,13 @@ const DateNavBar = () => {
 
 
   useEffect(() => {
-    //set color
-    setActivateLink(location.pathname);
+    if (location.pathname==="/") {
+      setActivateLink("/football/list-live")
+    } else {
+      //set color
+      setActivateLink(location.pathname);
+    }
+    
    
   }, [activateLink, value]);
   // console.log(dateString);

@@ -8,18 +8,33 @@ const AllFMatches = () => {
   const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
   const broken_link = location.pathname.split("/");
-  console.log(broken_link);
+  // console.log(broken_link);
   const [data, setData] = useState([]);
-  
-  const linkParams1 = { Category: `${broken_link[1]=="football"?"soccer":"cricket"}`, Timezone: "6" };
+
+  const linkParams1 = {
+    Category: `${
+      broken_link[1] == "football"
+        ? "soccer"
+        : broken_link[1]
+        ? "cricket"
+        : "soccer"
+    }`,
+    Timezone: "6",
+  };
   const linkParams2 = {
-    Category: `${broken_link[1] == "football" ? "soccer" : "cricket"}`,
+    Category: `${
+      broken_link[1] == "football"
+        ? "soccer"
+        : broken_link[1]
+        ? "cricket"
+        : "soccer"
+    }`,
     Date: `${broken_link[3]}`,
     Timezone: "6",
   };
-  
+
   useEffect(() => {
-    setIsLoading(true)
+    setIsLoading(true);
     const options = {
       method: "GET",
       url: `https://livescore6.p.rapidapi.com/matches/v2/${
@@ -38,32 +53,20 @@ const AllFMatches = () => {
         setIsLoading(true);
         setData(response.data.Stages);
         setIsLoading(false);
-        console.log(response.data.Stages);
+        // console.log(response.data.Stages);
       })
       .catch(function (error) {
         console.error(error);
       });
-    // console.log(options);
   }, [location.pathname]);
 
-  /*   data.map((single) => {
-    console.log(single.Snm);
-  });
- */
   return (
     <div>
-      {/* {data.map((league) => (
-        //   <h3>{league.Snm}</h3>
-        <SingleLeague league={league} />
-      ))} */}
-      {isLoading  ? (
+      {isLoading ? (
         <Loader />
       ) : (
-        data.map((league) => (
-          //   <h3>{league.Snm}</h3>
-          <SingleLeague league={league} />
-        ))
-      )} 
+        data.map((league) => <SingleLeague league={league} />)
+      )}
       {/* <Loader/> */}
     </div>
   );

@@ -1,7 +1,9 @@
 .sidebar_bg {
-  background-image: url("../../../../assets/sidebar_news.png");
+  background: rgb(14,14,14);
+background: linear-gradient(270deg, rgba(14,14,14,0.7903536414565826) 13%, rgba(0,0,0,0.7903536414565826) 53%);
+ /*  background-image: url("../../../../assets/sidebar_news.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 .wrapper {
   background-color: var(--optional-color);

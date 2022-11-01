@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, redirect, useLocation } from "react-router-dom";
 import styles from "./Navigation.module.css";
 
 const NavigationBar = () => {
@@ -22,13 +22,13 @@ const NavigationBar = () => {
       setPath("/football");
     }
   }, []);
-
+ 
   return (
     <>
       <Navbar className={`${styles.navBar_wrapper}`} expand="lg" variant="dark">
         <Container>
           <Navbar.Brand>
-            <NavLink to="/football">
+            <NavLink to="/football/list-live">
               <img
                 alt=""
                 src="/assets/photos/logo.png"
@@ -42,7 +42,7 @@ const NavigationBar = () => {
             <Nav className="ms-auto">
               <Nav.Link>
                 <NavLink
-                  to="/football"
+                  to="/football/list-live"
                   className={
                     path == "/football"
                       ? `${styles.nav_link_activate}`

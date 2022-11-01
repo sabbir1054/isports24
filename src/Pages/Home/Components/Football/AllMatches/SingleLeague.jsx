@@ -17,12 +17,13 @@ const SingleLeague = ({ league }) => {
             <span className="fs-6 text-secondary mx-1">{`(${league.Cnm})`}</span>
           </Accordion.Header>
           <Accordion.Body>
-            {broken_link[1] == "football"
-              ? league.Events.map((singleMatch) => (
-                  <SingleMatch singleMatch={singleMatch} />
+             {broken_link[1] == "cricket"
+              ? 
+                league.Events.map((singleMatch) => (
+                  <SingleCricketMatch singleMatch={singleMatch} />
                 ))
               : league.Events.map((singleMatch) => (
-                  <SingleCricketMatch singleMatch={singleMatch} />
+                  <SingleMatch singleMatch={singleMatch} />
                 ))}
           </Accordion.Body>
         </Accordion.Item>

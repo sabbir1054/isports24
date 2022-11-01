@@ -1,11 +1,12 @@
 import React from "react";
 import NavigationBar from "../Shared/Navbar/NavigationBar";
-
+import styles from "./News.module.css"
 const NewsPage = () => {
   return (
-    <div>
+    <div className={styles.newsWrapper}>
       <NavigationBar />
-      This is news page
+      <hr className="text-light"/>
+      <h1 className="display-1 text-center">Page is under construction</h1>
     </div>
   );
 };
