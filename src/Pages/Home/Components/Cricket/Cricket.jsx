@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { cricket_news_id } from "../../../Shared/apikey";
 import NavigationBar from "../../../Shared/Navbar/NavigationBar";
 import DateNavBar from "../Football/DateNavbar/DateNavBar";
 import SideBarNews from "../SideBarNews/SideBarNews";
@@ -19,7 +20,7 @@ const Cricket = () => {
             </Col>
             <Col md={4} className={`${styles.sidebar_bg} g-0`}>
               <Container>
-                <SideBarNews></SideBarNews>{" "}
+                <SideBarNews id={cricket_news_id}></SideBarNews>{" "}
               </Container>
             </Col>
           </Row>

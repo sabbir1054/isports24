@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Loader from "../../../../Loader/Loader";
+import { api_key } from "../../../../Shared/apikey";
 import SingleLeague from "./SingleLeague";
 
 const AllFMatches = () => {
@@ -42,22 +43,22 @@ const AllFMatches = () => {
       }`,
       params: broken_link[2] == "list-live" ? linkParams1 : linkParams2,
       headers: {
-        "X-RapidAPI-Key": "3fedd7fb33msh09e89077ac707dep1de161jsn41e80cedb73b",
+        "X-RapidAPI-Key": api_key,
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com",
       },
     };
 
-    axios
+   /*  axios
       .request(options)
       .then(function (response) {
         setIsLoading(true);
         setData(response.data.Stages);
         setIsLoading(false);
-        // console.log(response.data.Stages);
+        console.log(response.data);
       })
       .catch(function (error) {
         console.error(error);
-      });
+      }); */
   }, [location.pathname]);
 
   return (

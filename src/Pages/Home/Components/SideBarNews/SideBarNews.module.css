@@ -1,25 +1,26 @@
-.latestNews_wrapper{
-    padding: 2vh 0;
-    /* width: 90%; */
-    /* background-color: black; */
+.latestNews_wrapper {
+  padding: 2vh 0;
+  /* width: 90%; */
+  /* background-color: black; */
 }
-.latestNews_wrapper h2{
-    border-bottom: 2px solid var(--primary-color);
-    color: var(--primary-color);
+.latestNews_wrapper h2 {
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
-.latestNews_wrapper h4{
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+.img_overlay {
+  top: unset;
+  background-color: rgba(0, 0, 0, 0.185);
+  transition: all 0.2s ease-in-out;
 }
-.latestNews_wrapper h4:hover{
-    color: var(--primary-color);
+.img_overlay:hover {
+  background-color: rgba(0, 0, 0, 0.486);
 }
-.latestNews_wrapper p:hover{
-    text-decoration: underline;
+
+.card_title {
+  transition: all 0.2s ease-in-out;
 }
-.singleNews{
-    border-bottom: 1px solid rgb(56, 56, 56);
-    padding-bottom: 2px;
-    padding-top: 5px;
+.card_title:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }

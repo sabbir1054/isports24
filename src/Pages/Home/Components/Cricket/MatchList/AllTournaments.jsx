@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { api_key } from '../../../../Shared/apikey';
 
 const AllTournaments = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,7 +28,7 @@ const AllTournaments = () => {
       }`,
       params: broken_link[2] == "list-live" ? linkParams1 : linkParams2,
       headers: {
-        "X-RapidAPI-Key": "3fedd7fb33msh09e89077ac707dep1de161jsn41e80cedb73b",
+        "X-RapidAPI-Key": api_key,
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com",
       },
     };
