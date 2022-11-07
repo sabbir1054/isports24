@@ -48,7 +48,7 @@ const AllFMatches = () => {
       },
     };
 
-   /*  axios
+    axios
       .request(options)
       .then(function (response) {
         setIsLoading(true);
@@ -58,7 +58,7 @@ const AllFMatches = () => {
       })
       .catch(function (error) {
         console.error(error);
-      }); */
+      });
   }, [location.pathname]);
 
   return (
