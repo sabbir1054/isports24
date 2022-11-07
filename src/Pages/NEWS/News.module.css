@@ -1,4 +1,13 @@
-.newsWrapper{
-    height: 100vh;
-    background-color: var(--optional-color);
+.newsWrapper {
+  height: 100vh;
+  background-color: var(--optional-color);
+}
+.newsDetails_wrapper {
+  background-color: var(--optional-color);
+  min-height: 100vh;
+}
+
+.news_body {
+  background-color: #111111;
+  color: rgb(212, 212, 212);
 }
