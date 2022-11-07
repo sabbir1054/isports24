@@ -11,3 +11,21 @@
   background-color: #111111;
   color: rgb(212, 212, 212);
 }
+
+/* Featured news */
+.img_overlay {
+  top: unset;
+  background-color: rgba(0, 0, 0, 0.185);
+  transition: all 0.2s ease-in-out;
+}
+.img_overlay:hover {
+  background-color: rgba(0, 0, 0, 0.486);
+}
+
+.card_title {
+  transition: all 0.2s ease-in-out;
+}
+.card_title:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
