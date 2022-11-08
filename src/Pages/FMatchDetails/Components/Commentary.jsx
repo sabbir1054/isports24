@@ -22,7 +22,7 @@ const Commentary = () => {
       },
     };
 
- /*    axios
+    axios
       .request(options)
       .then(function (response) {
         console.log(response.data.Com);
@@ -30,7 +30,7 @@ const Commentary = () => {
       })
       .catch(function (error) {
         console.error(error);
-      }); */
+      });
   }, []);
 
 

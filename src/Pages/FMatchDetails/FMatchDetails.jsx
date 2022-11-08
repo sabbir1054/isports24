@@ -2,13 +2,14 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Col, Container, Nav, Row } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
+import SideBarNews from "../Home/Components/SideBarNews/SideBarNews";
 import Loader from "../Loader/Loader";
-import { api_key } from "../Shared/apikey";
+import { api_key, football_news_id } from "../Shared/apikey";
 import NavigationBar from "../Shared/Navbar/NavigationBar";
 import Commentary from "./Components/Commentary";
 import Event from "./Components/Event";
 import Info from "./Components/Info";
-import Table from "./Components/Table";
+import MyTable from "./Components/MyTable";
 import Team from "./Components/Team";
 import styles from "./FMatchDetails.module.css";
 
@@ -119,11 +120,11 @@ const FMatchDetails = () => {
                       Table
                     </Nav.Link>
                   </Nav.Item>
-                  <Nav.Item onClick={() => changePage("team")}>
+                 {/*  <Nav.Item onClick={() => changePage("team")}>
                     <Nav.Link eventKey="team" className="text-white">
                       Team
                     </Nav.Link>
-                  </Nav.Item>
+                  </Nav.Item> */}
                 </Nav>
               </div>
               <div className="tabs">
@@ -139,11 +140,11 @@ const FMatchDetails = () => {
                   <Commentary />
                 </div>
                 <div className={tabName === "table" ? "d-block" : "d-none"}>
-                  <Table />
+                  <MyTable/>
                 </div>
-                <div className={tabName === "team" ? "d-block" : "d-none"}>
+                {/* <div className={tabName === "team" ? "d-block" : "d-none"}>
                   <Team />
-                </div>
+                </div> */}
               </div>
             </Col>
           ) : (
@@ -151,7 +152,7 @@ const FMatchDetails = () => {
           )}
           <Col md={4} className={`${styles.sidebar_bg} g-0`}>
             <Container>
-              {/* <SideBarNews id={football_news_id}></SideBarNews>{" "} */}
+              <SideBarNews id={football_news_id}></SideBarNews>{" "}
             </Container>
           </Col>
         </Row>

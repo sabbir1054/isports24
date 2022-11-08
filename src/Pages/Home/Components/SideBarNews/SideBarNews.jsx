@@ -1,19 +1,16 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
 import Loader from "../../../Loader/Loader";
-import { api_key} from "../../../Shared/apikey";
+import { api_key } from "../../../Shared/apikey";
 import styles from "./SideBarNews.module.css";
 import SingleNewsSide from "./SingleNewsSide";
-import axios from "axios"
 
-const SideBarNews = ({id}) => {
+const SideBarNews = ({ id }) => {
   const [data, setData] = useState([]);
-
 
   // console.log(broken_link[1]);
   useEffect(() => {
-
     const options = {
       method: "GET",
       url: "https://livescore6.p.rapidapi.com/news/v2/list",
@@ -36,7 +33,6 @@ const SideBarNews = ({id}) => {
         console.error(error);
       });
   }, []);
-
 
   return (
     <div className={`${styles.latestNews_wrapper}`}>
