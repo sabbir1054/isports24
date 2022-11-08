@@ -19,7 +19,7 @@ background: linear-gradient(270deg, rgba(14,14,14,0.7903536414565826) 13%, rgba(
 
 .singleMatch_wrapper {
   background-color: #111111;
-  border: 0px solid red;
+  /* border: 0px solid red; */
 }
 .singleMatch_wrapper {
   transition: all 0.3s ease-in-out;
@@ -27,6 +27,6 @@ background: linear-gradient(270deg, rgba(14,14,14,0.7903536414565826) 13%, rgba(
 .singleMatch_wrapper:hover {
   background-color: #222222;
   cursor: pointer;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 

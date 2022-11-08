@@ -11,6 +11,7 @@ const FeaturedSlide = ({ allArticle }) => {
   };
 
   const settings = {
+    lazyLoad:true,
     autoplay: true,
     dots: true,
     infinite: true,
@@ -48,16 +49,15 @@ const FeaturedSlide = ({ allArticle }) => {
     ],
   };
   return (
-      <div className="px-3">
-          <h3 className="text-center">Top Stories</h3>
-          {allArticle.length?(<Slider {...settings}>
-        {allArticle ? (
-          allArticle.map((item) => <SingleFeature article={item} />)
+    <div className="px-3">
+      <h3 className="text-center">Top Stories</h3>
+      <Slider {...settings}>
+        {allArticle.length ? (
+          allArticle?.map((item) => <SingleFeature article={item} />)
         ) : (
           <Loader />
         )}
-      </Slider>):(<Loader/>)}
-      
+      </Slider>
     </div>
   );
 };

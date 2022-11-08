@@ -9,13 +9,15 @@ const NavigationBar = () => {
 
   // url location
   useEffect(() => {
+    
     const broken_url = location.pathname.split("/");
+    // console.log(broken_url[1]);
     if (broken_url[1] == "football") {
       setPath("/football");
     } else if (broken_url[1] == "cricket") {
       setPath("/cricket");
     } else if (broken_url[1] == "news") {
-      setPath("/news");
+      setPath("/news/all");
     } else if (broken_url[1] == "liveTv") {
       setPath("/liveTv");
     } else {
@@ -67,9 +69,9 @@ const NavigationBar = () => {
               </Nav.Link>
               <Nav.Link>
                 <NavLink
-                  to="/news"
+                  to="/news/all"
                   className={
-                    path == "/news"
+                    path == "/news/all"
                       ? `${styles.nav_link_activate}`
                       : `${styles.nav_link}`
                   }

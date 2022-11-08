@@ -1,5 +1,5 @@
 .newsWrapper {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--optional-color);
 }
 .newsDetails_wrapper {
@@ -49,4 +49,21 @@
     background-color: var(--secondary-color) !important;
     color: var(--optional-color) !important;
     font-weight: bold;
+}
+
+.single_card_wrapper{
+  background-color: #111111 !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.single_card_wrapper:hover{
+  background-color: #222222 !important;
+  cursor: pointer;
+}
+
+/* Category news details */
+
+.category_news_details_wrapper{
+  background-color: var(--optional-color);
+  min-height: 100vh;
 }

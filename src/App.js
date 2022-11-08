@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Cricket from "./Pages/Home/Components/Cricket/Cricket";
 import Football from "./Pages/Home/Components/Football/Football";
 import Livetv from "./Pages/LiveTv/Livetv";
+import CategoryNewsDetails from "./Pages/NEWS/Components/Category/CategoryNewsDetails";
 import DetailsNewsPage from "./Pages/NEWS/DetailsNewsPage";
 
 import NewsPage from "./Pages/NEWS/NewsPage";
@@ -24,6 +25,11 @@ function App() {
       <Route path="/news/all" element={<NewsPage />} />
       <Route path="/news/football" element={<NewsPage />} />
       <Route path="/news/cricket" element={<NewsPage />} />
+      <Route path="/news/champion_league" element={<NewsPage />} />
+      <Route path="/news/world_cup_2022" element={<NewsPage />} />
+      <Route path="/news/transfer_news" element={<NewsPage />} />
+      <Route path="/news/others_news" element={<NewsPage />} />
+      <Route path="/news/category/:id" element={<CategoryNewsDetails />} />
       <Route path="/liveTv" element={<Livetv />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
