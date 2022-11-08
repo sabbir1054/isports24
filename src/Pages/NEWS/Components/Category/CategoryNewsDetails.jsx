@@ -41,7 +41,9 @@ const CategoryNewsDetails = () => {
         console.error(error);
       });
   }, []);
-
+if (play) {
+    console.log(news);
+}
   return (
     <div className="bg-dark">
       <div>

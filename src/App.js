@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import FMatchDetails from "./Pages/FMatchDetails/FMatchDetails";
 import Cricket from "./Pages/Home/Components/Cricket/Cricket";
 import Football from "./Pages/Home/Components/Football/Football";
 import Livetv from "./Pages/LiveTv/Livetv";
@@ -31,6 +32,10 @@ function App() {
       <Route path="/news/others_news" element={<NewsPage />} />
       <Route path="/news/category/:id" element={<CategoryNewsDetails />} />
       <Route path="/liveTv" element={<Livetv />} />
+      <Route
+        path="/football/matchDetails/:eventIDtabName"
+        element={<FMatchDetails />}
+      ></Route>
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );
