@@ -10,3 +10,11 @@
     rgba(0, 0, 0, 0.7903536414565826) 53%
   );
 }
+
+
+/* info */
+
+.info_p:hover{
+  background-color: #222222;
+  cursor:pointer
+}
