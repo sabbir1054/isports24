@@ -7,10 +7,11 @@ import { api_key } from "../../Shared/apikey";
 import styles from "../FMatchDetails.module.css";
 
 const Event = () => {
+  const [isNotAvailable, setIsNotAvailable] = useState(false);
   const [play, setPlay] = useState(false);
   const [data, setData] = useState({});
-  const [firstEvent, setFirstEvent] = useState();
-  const [secondEvent, setSecondEvent] = useState();
+  const [firstEvent, setFirstEvent] = useState([]);
+  const [secondEvent, setSecondEvent] = useState([]);
   const location = useLocation();
   const eid = location.pathname.split("=")[1].split("-")[0];
   const tabName = location.pathname.split("=")[1].split("-")[1];
@@ -29,15 +30,20 @@ const Event = () => {
     axios
       .request(options)
       .then(function (response) {
-        const [number, number2] = Object.keys(response.data.Incs);
-        console.log(response.data.Incs[number]);
-        //  console.log(response.data.Incs[number2]);
-        //  console.log(number2);
-        console.log(response.data);
-        setData(response.data);
-        setFirstEvent(response.data.Incs[number]);
-        setSecondEvent(response.data.Incs[number2]);
-        setPlay(true);
+        if (response.data.Incs !== undefined) {
+          const [number, number2] = Object.keys(response.data.Incs);
+          console.log(response.data.Incs[number]);
+          //  console.log(response.data.Incs[number2]);
+          //  console.log(number2);
+          console.log(response.data);
+          setData(response.data);
+          setFirstEvent(response.data.Incs[number]);
+          setSecondEvent(response.data.Incs[number2]);
+          setPlay(true);
+        } else {
+          setIsNotAvailable(true);
+        }
+       
       })
       .catch(function (error) {
         console.error(error);
@@ -45,6 +51,11 @@ const Event = () => {
   }, []);
   return (
     <div>
+      {isNotAvailable ? (
+        <h1 className="text-white text-center">Events data not available</h1>
+      ) : (
+        ""
+      )}
       {/* Start  */}
       {play ? (
         firstEvent.map((item) => (
@@ -103,7 +114,7 @@ const Event = () => {
       {/* Last Part  */}
       <div>
         {play ? (
-          secondEvent.map((item) => (
+          secondEvent?.map((item) => (
             <Row
               className={`text-white border border-secondary rounded my-1  ${styles.info_p} g-0`}
             >
@@ -151,7 +162,7 @@ const Event = () => {
             <Col xs={4}>
               <p className="text-start pt-2 ms-2"> Full Time </p>{" "}
             </Col>
-            <Col xs={8} >
+            <Col xs={8}>
               <p className="text-start pt-2 fw-bold fs-5">
                 {data.Tr1} - {data.Tr2}
               </p>

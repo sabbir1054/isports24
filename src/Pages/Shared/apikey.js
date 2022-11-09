@@ -1,4 +1,4 @@
-const api_key = "a31f3dce9emsh834987801c3ac73p19f712jsnbb0bfd1fd15e";
+const api_key = "89e8bcf2e7mshe55a0884953bb18p1d66afjsn58b4dd96ee92";
 const football_news_id = "2021020913320920836";
 const match_report = "2022081113203185684";
 const cricket_news_id = "2021020913321411486";
@@ -16,3 +16,5 @@ export {
   world_cup,
   others,
 };
+/* 89e8bcf2e7mshe55a0884953bb18p1d66afjsn58b4dd96ee92 */
+/* 693d87b0f6msh5a01d7127fe5a9cp136bdbjsn9cab99c2b6d0 */

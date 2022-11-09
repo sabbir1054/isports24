@@ -6,6 +6,7 @@ import Loader from "../../Loader/Loader";
 import { api_key } from "../../Shared/apikey";
 
 const MyTable = () => {
+  const [isNotAvailable, setIsNotAvailable] = useState(false);
   const [play, setPlay] = useState(false);
   const [data, setData] = useState({});
   const [table, setTable] = useState([]);
@@ -27,10 +28,17 @@ const MyTable = () => {
     axios
       .request(options)
       .then(function (response) {
-        setData(response.data.Stages[0]);
-        // console.log(response.data.Stages[0]);
-        setTable(response.data.Stages[0].LeagueTable.L[0].Tables[0].team);
-        setPlay(true);
+        if (
+          response.data.Stages[0].LeagueTable.L[0].Tables[0].team != undefined
+        ) {
+          setData(response.data.Stages[0]);
+          // console.log(response.data.Stages[0]);
+          setTable(response.data.Stages[0].LeagueTable.L[0].Tables[0].team);
+          setPlay(true);
+        } else {
+          setIsNotAvailable(true);
+        }
+        
       })
       .catch(function (error) {
         console.error(error);
@@ -52,7 +60,12 @@ const MyTable = () => {
       .request(options)
       .then(function (response) {
         // console.log(response.data.Stg.CompId);
-        getTable(response.data.Stg.CompId);
+        if (response.data.Stg.CompId !== undefined) {
+          getTable(response.data.Stg.CompId);
+        } else {
+          setIsNotAvailable(true);
+        }
+        
       })
       .catch(function (error) {
         console.error(error);
@@ -60,7 +73,8 @@ const MyTable = () => {
   }, []);
   return (
     <div>
-      {" "}
+      {/* Not available massage */}
+      {isNotAvailable ? <h1 className="text-white text-center">Table data not available</h1> : ""}
       <Table variant="dark" striped bordered hover>
         <thead>
           <th className="py-2">#</th>
