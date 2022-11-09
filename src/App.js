@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import CMatchDetails from "./Pages/CMatchDetails/CMatchDetails";
 import FMatchDetails from "./Pages/FMatchDetails/FMatchDetails";
 import Cricket from "./Pages/Home/Components/Cricket/Cricket";
 import Football from "./Pages/Home/Components/Football/Football";
@@ -36,6 +37,10 @@ function App() {
         path="/football/matchDetails/:eventIDtabName"
         element={<FMatchDetails />}
       ></Route>
+      <Route
+        path="/cricket/matchDetails/:eventIDtabName"
+        element={<CMatchDetails />}
+      />
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );

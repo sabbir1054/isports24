@@ -63,6 +63,11 @@ const AllFMatches = () => {
 
   return (
     <div>
+      {data.length == 0 ? (
+        <h1 className="text-white text-center">No Match Now</h1>
+      ) : (
+        ""
+      )}
       {isLoading ? (
         <Loader />
       ) : (

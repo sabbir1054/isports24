@@ -1,0 +1,20 @@
+.CmatchDetails_wrapper {
+  background-color: var(--optional-color);
+  min-height: 100vh;
+}
+.sidebar_bg {
+  background: rgb(14, 14, 14);
+  background: linear-gradient(
+    270deg,
+    rgba(14, 14, 14, 0.7903536414565826) 13%,
+    rgba(0, 0, 0, 0.7903536414565826) 53%
+  );
+}
+
+
+/* info */
+
+.info_p:hover{
+  background-color: #222222;
+  cursor:pointer
+}
