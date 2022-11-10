@@ -45,7 +45,7 @@ const CCommentary = () => {
       .catch(function (error) {
         console.error(error);
       });
-  }, [selectedTeam]);
+  }, []);
   const getSelectedTeam = (x) => {
     setSelectedTeam(x);
     // console.log(x);
@@ -71,7 +71,7 @@ const CCommentary = () => {
         ) : (
           ""
         )}
-        {play && selectedTeam == "tm1" ? (
+        {play && selectedTeam === "tm1" ? (
           commentary?.map((item) => (
             <Row
               className={`text-white border  border-secondary rounded p-3 my-2 ${styles.info_p} g-0`}
@@ -88,7 +88,7 @@ const CCommentary = () => {
         ) : (
           ""
         )}
-        {play && selectedTeam == "tm2" ? (
+        {play && selectedTeam === "tm2" ? (
           commentary2?.map((item) => (
             <Row
               className={`text-white border  border-secondary rounded p-3 my-2 ${styles.info_p} g-0`}

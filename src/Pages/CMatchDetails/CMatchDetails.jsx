@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Nav, Row } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 import SingleCricketMatch from "../Home/Components/Cricket/MatchList/SingleCricketMatch";
+import SideBarNews from "../Home/Components/SideBarNews/SideBarNews";
 import Loader from "../Loader/Loader";
-import { api_key } from "../Shared/apikey";
+import { api_key, cricket_news_id } from "../Shared/apikey";
 import NavigationBar from "../Shared/Navbar/NavigationBar";
 import styles from "./CMatch.module.css";
 import CCommentary from "./Components/CCommentary";
@@ -113,7 +114,7 @@ const CMatchDetails = () => {
           )}
           <Col md={4} className={`${styles.sidebar_bg} g-0`}>
             <Container>
-              {/* <SideBarNews id={cricket_news_id}></SideBarNews>{" "} */}
+              <SideBarNews id={cricket_news_id}></SideBarNews>{" "}
             </Container>
           </Col>
         </Row>
