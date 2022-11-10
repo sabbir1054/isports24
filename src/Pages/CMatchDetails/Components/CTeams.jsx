@@ -43,7 +43,7 @@ const CTeams = ({ tm1, tm2 }) => {
       <div className="both_team">
         <Container>
           <Row>
-            <Col xm={6}>
+            <Col sm={6}>
               <Table variant={"dark"} responsive hover className="mt-3">
                 <thead>
                   <tr>
@@ -61,7 +61,7 @@ const CTeams = ({ tm1, tm2 }) => {
                 </tbody>
               </Table>
             </Col>
-            <Col xm={6}>
+            <Col sm={6}>
               <Table variant={"dark"} responsive hover className="mt-3">
                 <thead>
                   <tr>

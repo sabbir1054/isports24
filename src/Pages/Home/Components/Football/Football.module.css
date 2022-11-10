@@ -30,3 +30,8 @@ background: linear-gradient(270deg, rgba(14,14,14,0.7903536414565826) 13%, rgba(
   /* border: 1px solid red; */
 }
 
+@media (max-width: 575.98px) {
+  .ScoreBoardSpace {
+    display: none !important;
+  }
+}

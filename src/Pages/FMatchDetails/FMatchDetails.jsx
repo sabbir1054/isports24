@@ -55,7 +55,7 @@ const FMatchDetails = () => {
       <Container>
         <Row className="w-100 g-0 ">
           {play ? (
-            <Col md={8} className="">
+            <Col lg={8} className="">
               <div className="scoreBoard bg-dark">
                 <div
                   className={`text-white border  border-secondary rounded p-3 my-2 ${styles.info_p}`}
@@ -150,7 +150,7 @@ const FMatchDetails = () => {
           ) : (
             <Loader />
           )}
-          <Col md={4} className={`${styles.sidebar_bg} g-0`}>
+          <Col lg={4} className={`${styles.sidebar_bg} g-0`}>
             <Container>
               <SideBarNews id={football_news_id}></SideBarNews>{" "}
             </Container>

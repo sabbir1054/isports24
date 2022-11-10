@@ -64,7 +64,7 @@ const DateNavCricket = () => {
             Live
           </NavLink>
         </li>
-        <li onClick={() => colorChange("day1")}>
+        <li onClick={() => colorChange("day1")} className={styles.nav_DAY1}>
           <NavLink
             to={`/cricket/allMatches/${day1Str}`}
             id="day1"
@@ -103,7 +103,7 @@ const DateNavCricket = () => {
             Today
           </NavLink>
         </li>
-        <li onClick={() => colorChange("day4")}>
+        <li onClick={() => colorChange("day4")} className={styles.nav_DAY4}>
           <NavLink
             to={`/cricket/allMatches/${day4Str}`}
             id="day4"
@@ -116,7 +116,7 @@ const DateNavCricket = () => {
             Tomorrow
           </NavLink>
         </li>
-        <li onClick={() => colorChange("day5")}>
+        <li onClick={() => colorChange("day5")} className={styles.nav_DAY1}>
           <NavLink
             to={`/cricket/allMatches/${day5Str}`}
             id="day5"

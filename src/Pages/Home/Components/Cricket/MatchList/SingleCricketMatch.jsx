@@ -36,7 +36,7 @@ const SingleCricketMatch = ({ singleMatch }) => {
                     )}
                   </p>
                 </Col>
-                <Col className="text-end"></Col>
+                <Col className={styles.ScoreBoardSpace}></Col>
                 {/* Team 2 */}
               </Row>
               <Row className="text-white">
@@ -59,7 +59,7 @@ const SingleCricketMatch = ({ singleMatch }) => {
                     )}
                   </p>
                 </Col>
-                <Col></Col>
+                <Col className={styles.ScoreBoardSpace}></Col>
               </Row>
               <p className="text-start fw-bold ">{singleMatch.ECo}</p>
             </Container>

@@ -61,25 +61,25 @@ if (play) {
                 </p>
                 <hr className="text-secondary" />
               </div>
-              <div className="news_img w-75">
+              <div className="news_img d-flex justify-content-center">
                 <img
                   src={`${news?.main_media[0]?.data?.urls?.uploaded?.original}`}
-                  className="img-fluid rounded"
                   alt=""
                   srcset=""
+                  className={`img-fluid rounded ${styles.news_img}`}
                 />
               </div>
-              <div
-                className={`color-white w-75 w-sm-100 p-4 ${styles.news_body}`}
-              >
-                {news?.body?.map((item) => (
-                  <div className=" fs-5">
-                    <div
-                      dangerouslySetInnerHTML={{ __html: item.data.content }}
-                      key={ids[0]}
-                    />
-                  </div>
-                ))}
+              <div className={`color-white d-flex justify-content-center`}>
+                <div className={`p-4 ${styles.news_body}`}>
+                  {news?.body?.map((item) => (
+                    <div className=" fs-5">
+                      <div
+                        dangerouslySetInnerHTML={{ __html: item.data.content }}
+                        key={ids[0]}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </Container>
           ) : (

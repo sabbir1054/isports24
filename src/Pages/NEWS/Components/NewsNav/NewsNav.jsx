@@ -62,7 +62,10 @@ const NewsNav = (props) => {
             Cricket
           </NavLink>
         </li>
-        <li onClick={() => colorChange("champion_league")}>
+        <li
+          onClick={() => colorChange("champion_league")}
+          className={styles.champ}
+        >
           <NavLink
             to={`/news/champion_league`}
             id="champion_league"
@@ -75,7 +78,7 @@ const NewsNav = (props) => {
             Champions League
           </NavLink>
         </li>
-        <li onClick={() => colorChange("world_cup_2022")}>
+        <li onClick={() => colorChange("world_cup_2022")} className={styles.world}>
           <NavLink
             to={`/news/world_cup_2022`}
             id="world_cup_2022"
@@ -85,10 +88,13 @@ const NewsNav = (props) => {
                 : styles.newsNav_link
             }`}
           >
-            World Cup 2022
+            World Cup 22
           </NavLink>
         </li>
-        <li onClick={() => colorChange("transfer_news")}>
+        <li
+          onClick={() => colorChange("transfer_news")}
+          className={styles.transfer}
+        >
           <NavLink
             to={`/news/transfer_news`}
             id="transfer_news"
@@ -101,7 +107,7 @@ const NewsNav = (props) => {
             Transfer News
           </NavLink>
         </li>
-        <li onClick={() => colorChange("others_news")}>
+        <li onClick={() => colorChange("others_news")} className={styles.other}>
           <NavLink
             to={`/news/others_news`}
             id="others_news"

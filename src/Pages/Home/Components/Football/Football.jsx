@@ -13,10 +13,10 @@ const Football = () => {
       <main className={`${styles.main_section}`}>
         <Container>
           <Row className="w-100 g-0">
-            <Col md={8}>
+            <Col lg={8}>
               <DateNavBar />
             </Col>
-            <Col md={4} className={`${styles.sidebar_bg} g-0`}>
+            <Col lg={4} className={`${styles.sidebar_bg} g-0`}>
               <Container>
                 <SideBarNews id={football_news_id}></SideBarNews>{" "}
               </Container>

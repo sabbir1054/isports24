@@ -64,20 +64,22 @@ const DetailsNewsPage = () => {
           </p>
           <hr className="text-secondary" />
         </div>
-        <div className="news_img w-75">
+        <div className="d-flex justify-content-center">
           <img
             src={`${data?.article?.mainMedia?.article?.url}`}
-            className="img-fluid rounded"
+            className={`img-fluid rounded ${styles.news_img}`}
             alt=""
             srcset=""
           />
         </div>
-        <div className={`color-white w-75 w-sm-100 p-4 ${styles.news_body}`}>
-          {data?.article?.body.map((item) => (
-            <div className=" fs-5">
-              <div dangerouslySetInnerHTML={{ __html: item.data.content }} />
-            </div>
-          ))}
+        <div className={`color-white   d-flex justify-content-center`}>
+          <div className={`p-4 ${styles.news_body}`}>
+            {data?.article?.body.map((item) => (
+              <div className=" fs-5">
+                <div dangerouslySetInnerHTML={{ __html: item.data.content }} />
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
     </div>

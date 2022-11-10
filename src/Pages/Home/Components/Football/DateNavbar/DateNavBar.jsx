@@ -69,7 +69,7 @@ const DateNavBar = () => {
             Live
           </NavLink>
         </li>
-        <li onClick={() => colorChange("day1")}>
+        <li onClick={() => colorChange("day1")} className={styles.nav_DAY1}>
           <NavLink
             to={`/football/allMatches/${day1Str}`}
             id="day1"
@@ -108,7 +108,7 @@ const DateNavBar = () => {
             Today
           </NavLink>
         </li>
-        <li onClick={() => colorChange("day4")}>
+        <li onClick={() => colorChange("day4")} className={styles.nav_DAY4}>
           <NavLink
             to={`/football/allMatches/${day4Str}`}
             id="day4"
@@ -121,7 +121,7 @@ const DateNavBar = () => {
             Tomorrow
           </NavLink>
         </li>
-        <li onClick={() => colorChange("day5")}>
+        <li onClick={() => colorChange("day5")} className={styles.nav_DAY5}>
           <NavLink
             to={`/football/allMatches/${day5Str}`}
             id="day5"

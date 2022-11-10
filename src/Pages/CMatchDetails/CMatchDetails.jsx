@@ -56,7 +56,7 @@ const CMatchDetails = () => {
       <Container>
         <Row className="w-100 g-0 ">
           {play ? (
-            <Col md={8} className="">
+            <Col lg={8} className="">
               <SingleCricketMatch singleMatch={data} />
               {/* Match Navigation */}
               <div className="match-navigation mt-3">
@@ -112,7 +112,7 @@ const CMatchDetails = () => {
           ) : (
             <Loader />
           )}
-          <Col md={4} className={`${styles.sidebar_bg} g-0`}>
+          <Col lg={4} className={`${styles.sidebar_bg} g-0`}>
             <Container>
               <SideBarNews id={cricket_news_id}></SideBarNews>{" "}
             </Container>
