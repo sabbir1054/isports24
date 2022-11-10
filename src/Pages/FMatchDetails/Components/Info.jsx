@@ -42,7 +42,7 @@ const Info = () => {
   }, []);
   return (
     <div>
-      {info ? (
+      {isNotAvailable ? (
         <h1 className="text-white text-center">
           Information data not available
         </h1>
