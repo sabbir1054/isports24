@@ -22,7 +22,7 @@ const CategoryWiseSingleCard = ({ article }) => {
             </div>
             <div className="col-md-7">
               <div className="card-body">
-                <h5 className="card-title">{article.title}</h5>
+                <h5 className={`card-title ${styles.categoryNews_title}`}>{article.title}</h5>
 
                 <p className="card-text">
                   <small className="text-muted">

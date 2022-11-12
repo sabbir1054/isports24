@@ -67,6 +67,11 @@
   min-height: 100vh;
 }
 
+
+.categoryNews_title:hover{
+  text-decoration: underline;
+}
+
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .news_img,
   .news_body {

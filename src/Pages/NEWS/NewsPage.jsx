@@ -19,17 +19,19 @@ const NewsPage = () => {
   const location = useLocation();
   const [topStoriesData, setTopStoriesData] = useState([]);
   const [allNews, setAllNews] = useState([]);
-  const [newsCategory, setNewsCategory] = useState(`${location.pathname.split("/")[2]}`);
-  const [footballNews, setFootballNews] = useState([]);
-  const [cricketNews, setCricketNews] = useState([]);
+  const [newsCategory, setNewsCategory] = useState(
+    `${location.pathname.split("/")[2]}`
+  );
+  // const [footballNews, setFootballNews] = useState([]);
+  // const [cricketNews, setCricketNews] = useState([]);
 
-  const devidedNewsCategoryWise = () => {
-    const fData = allNews.filter((item) => item.category.title === "football");
-    const cData = allNews.filter((item) => item.category.title === "cricket");
+  // const devidedNewsCategoryWise = () => {
+  //   const fData = allNews.filter((item) => item.category.title === "football");
+  //   const cData = allNews.filter((item) => item.category.title === "cricket");
 
-    setFootballNews(fData);
-    setCricketNews(cData);
-  };
+  //   // setFootballNews(fData);
+  //   // setCricketNews(cData);
+  // };
 
   /* Fetch data */
   useEffect(() => {
@@ -47,7 +49,7 @@ const NewsPage = () => {
       .then(function (response) {
         setTopStoriesData(response.data.topStories);
         setAllNews(response.data.homepageArticles);
-        devidedNewsCategoryWise();
+        // devidedNewsCategoryWise();
         console.log(response.data);
       })
       .catch(function (error) {
@@ -74,47 +76,63 @@ const NewsPage = () => {
           {allNews.length > 0 ? (
             <div>
               <div className="newsSection">
-                <div className={newsCategory === "all" ? `d-block` : `d-none`}>
-                  <AllCategory news={allNews} />
-                </div>
-                <div
-                  className={newsCategory === "cricket" ? `d-block` : `d-none`}
-                >
-                  <CricektNews news={cricketNews} />
-                </div>
-                <div
-                  className={newsCategory === "football" ? `d-block` : `d-none`}
-                >
-                  <FootballNews news={footballNews} />
-                </div>
-                <div
-                  className={
-                    newsCategory === "champion_league" ? `d-block` : `d-none`
-                  }
-                >
-                  <Champions />
-                </div>
-                <div
-                  className={
-                    newsCategory === "world_cup_2022" ? `d-block` : `d-none`
-                  }
-                >
-                  <WorldCup />
-                </div>
-                <div
-                  className={
-                    newsCategory === "transfer_news" ? `d-block` : `d-none`
-                  }
-                >
-                  <Transfer />
-                </div>
-                <div
-                  className={
-                    newsCategory === "others_news" ? `d-block` : `d-none`
-                  }
-                >
-                  <Others />
-                </div>
+                {newsCategory === "all" ? (
+                  <div
+                    className={newsCategory === "all" ? `d-block` : `d-none`}
+                  >
+                    <AllCategory news={allNews} />
+                  </div>
+                ) : newsCategory === "cricket" ? (
+                  <div
+                    className={
+                      newsCategory === "cricket" ? `d-block` : `d-none`
+                    }
+                  >
+                    <CricektNews />
+                  </div>
+                ) : newsCategory === "football" ? (
+                  <div
+                    className={
+                      newsCategory === "football" ? `d-block` : `d-none`
+                    }
+                  >
+                    <FootballNews />
+                  </div>
+                ) : newsCategory === "champion_league" ? (
+                  <div
+                    className={
+                      newsCategory === "champion_league" ? `d-block` : `d-none`
+                    }
+                  >
+                    <Champions />
+                  </div>
+                ) : newsCategory === "world_cup_2022" ? (
+                  <div
+                    className={
+                      newsCategory === "world_cup_2022" ? `d-block` : `d-none`
+                    }
+                  >
+                    <WorldCup />
+                  </div>
+                ) : newsCategory === "transfer_news" ? (
+                  <div
+                    className={
+                      newsCategory === "transfer_news" ? `d-block` : `d-none`
+                    }
+                  >
+                    <Transfer />
+                  </div>
+                ) : newsCategory === "others_news" ? (
+                  <div
+                    className={
+                      newsCategory === "others_news" ? `d-block` : `d-none`
+                    }
+                  >
+                    <Others />
+                  </div>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
           ) : (

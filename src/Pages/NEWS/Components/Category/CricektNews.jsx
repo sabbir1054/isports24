@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
+import Loader from "../../../Loader/Loader";
 import { api_key, cricket_news_id } from "../../../Shared/apikey";
 import CategoryWiseSingleCard from "./CategoryWiseSingleCard";
 
@@ -30,11 +31,15 @@ const CricektNews = () => {
 
   return (
     <div>
-      <Row xs={1} md={2} className="g-2">
-        {data?.map((item) => (
-          <CategoryWiseSingleCard article={item} />
-        ))}
-      </Row>
+      {data.length ? (
+        <Row xs={1} md={2} className="g-2">
+          {data?.map((item) => (
+            <CategoryWiseSingleCard article={item} />
+          ))}
+        </Row>
+      ) : (
+        <Loader />
+      )}
     </div>
   );
 };

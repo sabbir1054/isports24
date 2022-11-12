@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
+import Loader from "../../../Loader/Loader";
 import { api_key, transfer_news } from "../../../Shared/apikey";
 import CategoryWiseSingleCard from "./CategoryWiseSingleCard";
 
@@ -29,11 +30,15 @@ const Transfer = () => {
   }, []);
   return (
     <div>
-      <Row xs={1} md={2} className="g-2">
-        {data?.map((item) => (
-          <CategoryWiseSingleCard article={item} />
-        ))}
-      </Row>
+      {data.length ? (
+        <Row xs={1} md={2} className="g-2">
+          {data?.map((item) => (
+            <CategoryWiseSingleCard article={item} />
+          ))}
+        </Row>
+      ) : (
+        <Loader />
+      )}
     </div>
   );
 };
