@@ -75,7 +75,7 @@ const MyTable = () => {
     <div>
       {/* Not available massage */}
       {isNotAvailable ? <h1 className="text-white text-center">Table data not available</h1> : ""}
-      <Table variant="dark" striped bordered hover>
+      <Table variant="dark" responsive striped bordered hover>
         <thead>
           <th className="py-2">#</th>
           <th>TEAM</th>
