@@ -1,4 +1,4 @@
-const api_key = "8e4df790e7mshc621fb971b0b7fep1907bfjsn78e35cff3bb9";
+const api_key = "8abffe9d10msh7b578eda64f6695p132a99jsn6783123686f2";
 const football_news_id = "2021020913320920836";
 const match_report = "2022081113203185684";
 const cricket_news_id = "2021020913321411486";
@@ -17,9 +17,12 @@ export {
   others,
 };
 /* 89e8bcf2e7mshe55a0884953bb18p1d66afjsn58b4dd96ee92 */
-/* ba8b278995mshf058456e894c439p1f1b72jsn03dfddf3e081 */
 
 /* 
-new
-8e4df790e7mshc621fb971b0b7fep1907bfjsn78e35cff3bb9
+develop
+b6691ba031mshe09c8bcdbc68b27p1c0c8cjsn79edaab9b47b
+*/
+/* 
+live
+8abffe9d10msh7b578eda64f6695p132a99jsn6783123686f2
 */

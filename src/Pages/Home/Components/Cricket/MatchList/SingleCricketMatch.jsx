@@ -1,11 +1,15 @@
-import React from "react";
+import { collection, onSnapshot } from "firebase/firestore";
+import React, { useEffect } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import ReactCountryFlag from "react-country-flag";
 import { NavLink } from "react-router-dom";
+import { db } from "../../../../../Firebase/DBinit";
 // import ReactCountryFlag from "react-country-flag";
 import styles from "../../Football/Football.module.css";
 const SingleCricketMatch = ({ singleMatch }) => {
-  console.log(singleMatch.T1[0].Abr);
+  // console.log(singleMatch.T1[0].Abr);
+
+
   return (
     <div className={`py-2 ${styles.singleMatch_container}`}>
       <NavLink

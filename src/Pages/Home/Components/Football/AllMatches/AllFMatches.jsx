@@ -4,6 +4,9 @@ import { useLocation } from "react-router-dom";
 import Loader from "../../../../Loader/Loader";
 import { api_key } from "../../../../Shared/apikey";
 import SingleLeague from "./SingleLeague";
+import { collection, onSnapshot } from "firebase/firestore";
+import { db } from "../../../../../Firebase/DBinit";
+import RealCricketLive from "../../Cricket/MatchList/RealCricketLive";
 
 const AllFMatches = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,6 +14,9 @@ const AllFMatches = () => {
   const broken_link = location.pathname.split("/");
   // console.log(broken_link);
   const [data, setData] = useState([]);
+
+
+
 
   const linkParams1 = {
     Category: `${
@@ -53,8 +59,9 @@ const AllFMatches = () => {
       .then(function (response) {
         setIsLoading(true);
         setData(response.data.Stages);
+     
         setIsLoading(false);
-        console.log(response.data);
+        // console.log(response.data);
       })
       .catch(function (error) {
         console.error(error);
@@ -63,6 +70,7 @@ const AllFMatches = () => {
 
   return (
     <div>
+     
       {data.length == 0 ? (
         <h1 className="text-white text-center">No Match Now</h1>
       ) : (

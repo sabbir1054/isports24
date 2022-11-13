@@ -1,9 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
+import SideBarNews from "../../../Home/Components/SideBarNews/SideBarNews";
 import Loader from "../../../Loader/Loader";
-import { api_key } from "../../../Shared/apikey";
+import { api_key, cricket_news_id, football_news_id } from "../../../Shared/apikey";
 import NavigationBar from "../../../Shared/Navbar/NavigationBar";
 import styles from "../../News.module.css";
 const CategoryNewsDetails = () => {
@@ -52,37 +53,58 @@ if (play) {
           <hr className="text-white" />
           {play ? (
             <Container>
-              <div className={`news_header  py-2`}>
-                <h1 className="fw-bold text-start mb-3 mt-5">{news?.title}</h1>
+              <Row className="w-100 g-0">
+                <Col lg={8}>
+                  <div className={`news_header  py-2`}>
+                    <h1 className="fw-bold text-start mb-3 mt-5">
+                      {news?.title}
+                    </h1>
 
-                <p className="text-white  text-start py-0">
-                  <span className="fw-bold">Publish Date:</span>{" "}
-                  {news?.updated_at?.split("T")[0]}
-                </p>
-                <hr className="text-secondary" />
-              </div>
-              <div className="news_img d-flex justify-content-center">
-                <img
-                  src={`${news?.main_media[0]?.data?.urls?.uploaded?.original}`}
-                  alt=""
-                  srcset=""
-                  className={`img-fluid rounded ${styles.news_img}`}
-                />
-              </div>
-              <div className={`color-white d-flex justify-content-center`}>
-                <div className={`p-4 ${styles.news_body}`}>
-                  {news?.body?.map((item) => (
-                    <div className=" fs-5">
-                      <div
-                        dangerouslySetInnerHTML={{ __html: item.data.content }}
-                        key={ids[0]}
-                      />
+                    <p className="text-white  text-start py-0">
+                      <span className="fw-bold">Publish Date:</span>{" "}
+                      {news?.updated_at?.split("T")[0]}
+                    </p>
+                    <hr className="text-secondary" />
+                  </div>
+                  <div className="news_img d-flex justify-content-center">
+                    <img
+                      src={`${news?.main_media[0]?.data?.urls?.uploaded?.original}`}
+                      alt=""
+                      srcset=""
+                      className={`img-fluid rounded ${styles.news_img}`}
+                    />
+                  </div>
+                  <div className={`color-white d-flex justify-content-center`}>
+                    <div className={`p-4 ${styles.news_body}`}>
+                      {news?.body?.map((item) => (
+                        <div className=" fs-5">
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: item.data.content,
+                            }}
+                            key={ids[0]}
+                          />
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </div>
+                  </div>
+                </Col>
+                <Col lg={4} className={`${styles.sidebar_bg} g-0`}>
+                  <Container>
+                    {news?.category?.title === "Cricket" ? (
+                      <SideBarNews id={cricket_news_id} />
+                    ) : news?.category?.title === "Football" ? (
+                      <SideBarNews id={football_news_id} />
+                    ) : (
+                      <SideBarNews id={football_news_id} />
+                    )}
+                 
+                  </Container>
+                </Col>
+              </Row>
             </Container>
           ) : (
+           
             <Loader />
           )}
         </div>

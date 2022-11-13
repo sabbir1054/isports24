@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { NavLink, redirect, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import styles from "./Navigation.module.css";
 
 const NavigationBar = () => {
@@ -9,7 +9,6 @@ const NavigationBar = () => {
 
   // url location
   useEffect(() => {
-    
     const broken_url = location.pathname.split("/");
     // console.log(broken_url[1]);
     if (broken_url[1] == "football") {
@@ -24,7 +23,7 @@ const NavigationBar = () => {
       setPath("/football");
     }
   }, []);
- 
+
   return (
     <>
       <Navbar className={`${styles.navBar_wrapper}`} expand="lg" variant="dark">
@@ -35,7 +34,7 @@ const NavigationBar = () => {
                 alt=""
                 src="/assets/photos/logo.png"
                 width="250"
-                className="d-inline-block align-top"
+                className="d-inline-block align-top img-fluid"
               />
             </NavLink>
           </Navbar.Brand>
@@ -94,7 +93,6 @@ const NavigationBar = () => {
             </Nav>
           </Navbar.Collapse>
         </Container>
-        
       </Navbar>
     </>
   );

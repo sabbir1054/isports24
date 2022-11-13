@@ -3,7 +3,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import styles from "../Football.module.css";
 const SingleMatch = ({ singleMatch }) => {
-  console.log(singleMatch);
+  // console.log(singleMatch);
   return (
     <div className={`py-2`}>
       <NavLink
