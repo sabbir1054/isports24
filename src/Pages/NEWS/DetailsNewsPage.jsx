@@ -88,9 +88,11 @@ const DetailsNewsPage = () => {
             <Container>
               {data?.categoryName === "cricket" ? (
                 <SideBarNews id={cricket_news_id} />
-              ) :data?.categoryName === "football" ? (
+              ) : data?.categoryName === "football" ? (
                 <SideBarNews id={football_news_id} />
-              ):""}
+              ) : (
+                <SideBarNews id={football_news_id} />
+              )}
               {/* <SideBarNews /> */}
             </Container>
           </Col>
