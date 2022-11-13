@@ -79,7 +79,7 @@ const AllFMatches = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        data.map((league) => <SingleLeague league={league} />)
+          data.map((league) => <SingleLeague league={league} key={ league.id} />)
       )}
       {/* <Loader/> */}
     </div>

@@ -1,4 +1,4 @@
-const api_key = "b6691ba031mshe09c8bcdbc68b27p1c0c8cjsn79edaab9b47b";
+const api_key = "8abffe9d10msh7b578eda64f6695p132a99jsn6783123686f2";
 const football_news_id = "2021020913320920836";
 const match_report = "2022081113203185684";
 const cricket_news_id = "2021020913321411486";

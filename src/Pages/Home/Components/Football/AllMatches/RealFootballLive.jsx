@@ -25,7 +25,7 @@ const RealFootballLive = () => {
       setTm2(team2Data);
     });
   }, []);
-  console.log(tm1);
+//   console.log(tm1);
   return (
     <div>
       {live ? (

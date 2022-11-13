@@ -3,7 +3,7 @@ import { Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import styles from "../../News.module.css"
 const SinglenewsCard = ({ article }) => {
-  console.log(article);
+  // console.log(article);
   const newUrl = article.url.split("/")[4];
   const dateTime = article.publishedAt.split("T");
   return (

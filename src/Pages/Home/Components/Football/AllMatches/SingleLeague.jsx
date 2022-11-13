@@ -12,11 +12,13 @@ const SingleLeague = ({ league }) => {
   // console.log(league);
   return (
     <div className="py-2 ">
-      {broken_link[1] === "cricket"&&broken_link[2]==="list-live" ? (
+      {broken_link[1] === "cricket" && broken_link[2] === "list-live" ? (
         <RealCricketLive />
-      ) : broken_link[1] === "football"&&broken_link[2]==="list-live" ?(
+      ) : broken_link[1] === "football" && broken_link[2] === "list-live" ? (
         <RealFootballLive />
-      ):""}
+      ) : (
+        ""
+      )}
 
       <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0" className={styles.accordion_item}>
@@ -27,10 +29,10 @@ const SingleLeague = ({ league }) => {
           <Accordion.Body>
             {broken_link[1] == "cricket"
               ? league.Events.map((singleMatch) => (
-                  <SingleCricketMatch singleMatch={singleMatch} />
+                  <SingleCricketMatch singleMatch={singleMatch}  />
                 ))
               : league.Events.map((singleMatch) => (
-                  <SingleMatch singleMatch={singleMatch} />
+                  <SingleMatch singleMatch={singleMatch}  />
                 ))}
           </Accordion.Body>
         </Accordion.Item>
