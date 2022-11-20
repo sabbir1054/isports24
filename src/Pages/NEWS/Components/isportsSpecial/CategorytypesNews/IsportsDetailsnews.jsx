@@ -48,10 +48,10 @@ const IsportsDetailsnews = () => {
                       {iSports10?.title}
                     </h1>
                     {/* Author logo */}
-                    <img
+                    {/* <img
                       src={`https://www.livescore.com${iSports10.image}`}
                       alt=""
-                    />
+                    /> */}
                     <p className="text-white py-0 d-inline-block ms-2 fw-bold">
                       {/* {data?.article?.publishedBy?.name}{" "} */}
                     </p>
@@ -63,12 +63,24 @@ const IsportsDetailsnews = () => {
                   </div>
                 </div>
                 <div className="d-flex justify-content-center">
-                  <img
-                    src={`${iSports10.image}`}
-                    className={`img-fluid rounded ${styles.news_img}`}
-                    alt=""
-                    srcset=""
-                  />
+                  {iSports10.have_any_video === true ? (
+                    <iframe
+                      width="720"
+                      height="415"
+                      src={`${iSports10.video}`}
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  ) : (
+                    <img
+                      src={`${iSports10.image}`}
+                      className={`img-fluid rounded ${styles.news_img}`}
+                      alt=""
+                      srcset=""
+                    />
+                  )}
                 </div>
                 <div className={`color-white   d-flex justify-content-center`}>
                   <div className={`p-4 ${styles.news_body}`}>
@@ -82,14 +94,13 @@ const IsportsDetailsnews = () => {
           </Col>
           <Col lg={4} className={`${styles.sidebar_bg} g-0`}>
             <Container>
-                {iSports10?.id ==1 ? (
-                  <SideBarNews id={cricket_news_id} iId={iSports10.category}/>
-                ) : iSports10?.id == 2 ? (
-                  <SideBarNews id={football_news_id} iId={iSports10.category}/>
-                ) : (
-                  <SideBarNews id={football_news_id} iId={iSports10.category}/>
-                )}
-             
+              {iSports10?.id == 1 ? (
+                <SideBarNews id={cricket_news_id} iId={iSports10.category} />
+              ) : iSports10?.id == 2 ? (
+                <SideBarNews id={football_news_id} iId={iSports10.category} />
+              ) : (
+                <SideBarNews id={football_news_id} iId={iSports10.category} />
+              )}
             </Container>
           </Col>
         </Row>
