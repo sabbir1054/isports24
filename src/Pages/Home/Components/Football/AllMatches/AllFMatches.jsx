@@ -7,6 +7,7 @@ import SingleLeague from "./SingleLeague";
 import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../../../../../Firebase/DBinit";
 import RealCricketLive from "../../Cricket/MatchList/RealCricketLive";
+import RealFootballLive from "./RealFootballLive";
 
 const AllFMatches = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -70,7 +71,13 @@ const AllFMatches = () => {
 
   return (
     <div>
-     
+      {broken_link[1] === "cricket" && broken_link[2] === "list-live" ? (
+        <RealCricketLive />
+      ) : broken_link[1] === "football" && broken_link[2] === "list-live" ? (
+        <RealFootballLive />
+      ) : (
+        ""
+      )}
       {data.length == 0 ? (
         <h1 className="text-white text-center">No Match Now</h1>
       ) : (
@@ -79,7 +86,7 @@ const AllFMatches = () => {
       {isLoading ? (
         <Loader />
       ) : (
-          data.map((league) => <SingleLeague league={league} key={ league.id} />)
+        data.map((league) => <SingleLeague league={league} key={league.id} />)
       )}
       {/* <Loader/> */}
     </div>
