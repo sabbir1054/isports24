@@ -1,6 +1,6 @@
 .nav_link {
   text-decoration: none !important;
-  color: var(--secondary-color) !important;
+  color: var(--primary-color) !important;
   font-size: 18px;
   transition: all 0.3s ease-in-out;
 }
@@ -11,7 +11,7 @@
   border-bottom: 2px solid var(--primary-color);
 }
 .navBar_wrapper{
-    background-color: black;
+    background-color: var(--secondary-color);
 }
 
 

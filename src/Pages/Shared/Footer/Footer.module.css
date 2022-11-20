@@ -1,4 +1,19 @@
-.footer_bg{
-    background-color: var(--optional-color);
-    color: var(--secondary-color) !important;
+.footer_bg {
+  background-color: var(--optional-color);
+  color: var(--secondary-color) !important;
+}
+
+.footer_bg p {
+  color: white;
+}
+.social_icon {
+  color: white;
+  font-size: 30px;
+  transition: all 0.3s ease-in-out;
+}
+.social_icon:hover {
+  color: var(--primary-color);
+  /* font-size: 30px;\ */
+  cursor: pointer;
+  
 }

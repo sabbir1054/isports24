@@ -82,7 +82,7 @@ const IsportsDetailsnews = () => {
                     />
                   )}
                 </div>
-                <div className={`color-white   d-flex justify-content-center`}>
+                <div className={`text-white   d-flex justify-content-center`}>
                   <div className={`p-4 ${styles.news_body}`}>
                     <p className="fs-5">{iSports10.details}</p>
                   </div>

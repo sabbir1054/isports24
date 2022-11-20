@@ -4,6 +4,8 @@ import Table from "react-bootstrap/Table";
 import { useLocation } from "react-router-dom";
 import Loader from "../../Loader/Loader";
 import { api_key } from "../../Shared/apikey";
+import styles from "../FMatchDetails.module.css"
+
 
 const MyTable = () => {
   const [isNotAvailable, setIsNotAvailable] = useState(false);
@@ -75,7 +77,7 @@ const MyTable = () => {
     <div>
       {/* Not available massage */}
       {isNotAvailable ? <h1 className="text-white text-center">Table data not available</h1> : ""}
-      <Table variant="dark" responsive striped bordered hover>
+      <Table className="text-white" responsive  bordered >
         <thead>
           <th className="py-2">#</th>
           <th>TEAM</th>
@@ -91,7 +93,7 @@ const MyTable = () => {
         <tbody>
           {play ? (
             table.map((item) => (
-              <tr>
+              <tr >
                 <td>{item.rnk}</td>
                 <td>{item.Tnm}</td>
                 <td>{item.pld}</td>

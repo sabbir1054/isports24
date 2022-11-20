@@ -112,7 +112,7 @@ const CMatchDetails = () => {
           ) : (
             <Loader />
           )}
-          <Col lg={4} className={`${styles.sidebar_bg} g-0`}>
+          <Col lg={4} className={` g-0`}>
             <Container>
               <SideBarNews id={cricket_news_id}></SideBarNews>{" "}
             </Container>

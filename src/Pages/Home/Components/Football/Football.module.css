@@ -1,16 +1,21 @@
 .sidebar_bg {
- background: rgb(14,14,14);
-background: linear-gradient(270deg, rgba(14,14,14,0.7903536414565826) 13%, rgba(0,0,0,0.7903536414565826) 53%);
+  background-color: var(--optional-color);
+ /* background: rgb(14,14,14);
+background: linear-gradient(270deg, rgba(14,14,14,0.7903536414565826) 13%, rgba(0,0,0,0.7903536414565826) 53%); */
 /*   background-image: url("../../../../assets/sidebar_news.png");
   background-repeat: no-repeat;
   background-size: cover; */
+}
+
+.text_span{
+  color: var(--primary-color);
 }
 .wrapper {
   background-color: var(--optional-color);
 }
 .accordion_item {
   color: gray !important;
-  background-color: black !important;
+  background-color: var(--optional-color) !important;
   border: 1px solid rgba(114, 114, 114, 0.377);
 }
 .accordion_header button {
@@ -18,14 +23,15 @@ background: linear-gradient(270deg, rgba(14,14,14,0.7903536414565826) 13%, rgba(
 }
 
 .singleMatch_wrapper {
-  background-color: #111111;
+  background-color: var(--secondary-color);
   /* border: 0px solid red; */
 }
 .singleMatch_wrapper {
   transition: all 0.3s ease-in-out;
 }
 .singleMatch_wrapper:hover {
-  background-color: #222222;
+  background-color: #1a4b83;
+  /* background-color: #ff0101; */
   cursor: pointer;
   /* border: 1px solid red; */
 }

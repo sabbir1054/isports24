@@ -6,9 +6,14 @@
   padding: 0;
 }
 :root {
-  --primary-color: #fd2626;
-  --secondary-color: #fff;
-  --optional-color: black;
+  
+  /* d0efff */
+  /* --primary-color: #fd2626; */
+  --primary-color: #d0efff;
+  /* --secondary-color: #fff; */
+  --secondary-color:#09386e;
+  /* --optional-color: black; */
+  --optional-color: #03254c;
 }
 h1,
 h2,
@@ -17,20 +22,22 @@ h4,
 h5,
 h6 {
   font-family: "Titillium Web", sans-serif;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 p,
 span {
   font-family: "Roboto", sans-serif;
 }
-
+hr{
+  margin: 0px !important;
+}
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--optional-color);
+  background: var(--secondary-color);
   border-radius: 10px;
 }
 
@@ -42,7 +49,7 @@ span {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary-color);
+  background: var(--);
 }
 
 body {
@@ -68,6 +75,9 @@ code {
   border-color: var(--bs-nav-tabs-link-active-border-color);
 }
 
+tr:hover{
+  background-color: var(--secondary-color);
+}
 
 
 /* X-Small devices (portrait phones, less than 576px)  */

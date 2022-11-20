@@ -23,8 +23,8 @@ const SingleIsportsCard = ({data}) => {
                   <h5 className="card-title">{data.title}</h5>
 
                   <p className="card-text">
-                    <small className="text-muted">
-                      <span className="me-2">
+                    <small className="text-white">
+                      <span className="me-2 text-white">
                         Date: {data.uploaded.split("T")[0]}
                       </span>{" "}
                       Time:

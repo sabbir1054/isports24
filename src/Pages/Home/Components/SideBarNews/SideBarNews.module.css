@@ -5,12 +5,12 @@
 }
 .latestNews_wrapper h2 {
   border-bottom: 2px solid var(--primary-color);
-  color: var(--primary-color);
+  
 }
 
 .img_overlay {
   top: unset;
-  background-color: rgba(0, 0, 0, 0.185);
+  background-color: rgba(0, 0, 0, 0.349);
   transition: all 0.2s ease-in-out;
 }
 .img_overlay:hover {

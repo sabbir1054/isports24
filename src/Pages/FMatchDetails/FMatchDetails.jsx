@@ -56,12 +56,12 @@ const FMatchDetails = () => {
         <Row className="w-100 g-0 ">
           {play ? (
             <Col lg={8} className="">
-              <div className="scoreBoard bg-dark">
+              <div className={`${styles.scoreBoard_section} my-3`}>
                 <div
                   className={`text-white border  border-secondary rounded p-3 my-2 ${styles.info_p}`}
                 >
                   <h5 className="text-start fw-bold pb-2">
-                    {data?.Stg?.CompN} 
+                    {data?.Stg?.CompN}
                   </h5>
                   <Row>
                     {/* Team 01 Info */}
@@ -120,7 +120,7 @@ const FMatchDetails = () => {
                       Table
                     </Nav.Link>
                   </Nav.Item>
-                 {/*  <Nav.Item onClick={() => changePage("team")}>
+                  {/*  <Nav.Item onClick={() => changePage("team")}>
                     <Nav.Link eventKey="team" className="text-white">
                       Team
                     </Nav.Link>
@@ -140,7 +140,7 @@ const FMatchDetails = () => {
                   <Commentary />
                 </div>
                 <div className={tabName === "table" ? "d-block" : "d-none"}>
-                  <MyTable/>
+                  <MyTable />
                 </div>
                 {/* <div className={tabName === "team" ? "d-block" : "d-none"}>
                   <Team />
@@ -150,7 +150,7 @@ const FMatchDetails = () => {
           ) : (
             <Loader />
           )}
-          <Col lg={4} className={`${styles.sidebar_bg} g-0`}>
+          <Col lg={4} className={` g-0`}>
             <Container>
               <SideBarNews id={football_news_id}></SideBarNews>{" "}
             </Container>

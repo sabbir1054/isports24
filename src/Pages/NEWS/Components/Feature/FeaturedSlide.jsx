@@ -13,7 +13,7 @@ const FeaturedSlide = ({ allArticle }) => {
   const settings = {
     lazyLoad:true,
     autoplay: true,
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -28,7 +28,7 @@ const FeaturedSlide = ({ allArticle }) => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          // dots: true,
         },
       },
       {
@@ -49,7 +49,7 @@ const FeaturedSlide = ({ allArticle }) => {
     ],
   };
   return (
-    <div className="px-3">
+    <div className="px-3 my-3">
       <h3 className="text-center">Top Stories</h3>
       <Slider {...settings}>
         {allArticle.length ? (

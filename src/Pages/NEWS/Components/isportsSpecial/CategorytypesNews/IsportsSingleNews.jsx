@@ -2,8 +2,12 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import styles from "../../../News.module.css";
+import { AiFillEye } from "react-icons/ai";
+import style from "../../../News.module.css"
 
 const IsportsSingleNews = ({ data }) => {
+
+
   console.log(data);
   return (
     <>
@@ -26,9 +30,16 @@ const IsportsSingleNews = ({ data }) => {
                   <h5 className="card-title">{data.title}</h5>
 
                   <p className="card-text">
-                    <small className="text-muted">
-                     <span className="me-2">Date: {data.uploaded.split("T")[0]}</span> Time:
+                    <small className="text-white">
+                      <span className="me-2 text-white">
+                        Date: {data.uploaded.split("T")[0]}
+                      </span>{" "}
+                      Time:
                       {data.uploaded.split("T")[1]}
+                      <span className="text-white mx-2">
+                        {" "}
+                        <AiFillEye className={styles.viewIcon} /> {data.view}
+                      </span>
                     </small>
                   </p>
                 </div>

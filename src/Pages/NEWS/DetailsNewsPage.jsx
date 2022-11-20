@@ -95,11 +95,11 @@ const DetailsNewsPage = () => {
           <Col lg={4} className={`${styles.sidebar_bg} g-0`}>
             <Container>
               {data?.categoryName === "cricket" ? (
-                <SideBarNews id={cricket_news_id} />
+                <SideBarNews id={cricket_news_id} iId={1}/>
               ) : data?.categoryName === "football" ? (
-                <SideBarNews id={football_news_id} />
+                  <SideBarNews id={football_news_id} iId={2} />
               ) : (
-                <SideBarNews id={football_news_id} />
+                    <SideBarNews id={football_news_id} iId={2} />
               )}
               {/* <SideBarNews /> */}
             </Container>

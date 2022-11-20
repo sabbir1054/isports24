@@ -44,7 +44,7 @@ const CTeams = ({ tm1, tm2 }) => {
         <Container>
           <Row>
             <Col sm={6}>
-              <Table variant={"dark"} responsive hover className="mt-3">
+              <Table  responsive  className="mt-3">
                 <thead>
                   <tr>
                     <th className="-2 text-center text-white fs-5">
@@ -62,7 +62,7 @@ const CTeams = ({ tm1, tm2 }) => {
               </Table>
             </Col>
             <Col sm={6}>
-              <Table variant={"dark"} responsive hover className="mt-3">
+              <Table responsive className="mt-3">
                 <thead>
                   <tr>
                     <th className="text-center fs-5 text-white">TEAM {tm2}</th>

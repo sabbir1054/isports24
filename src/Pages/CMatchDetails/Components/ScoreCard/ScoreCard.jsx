@@ -88,7 +88,7 @@ const ScoreCard = () => {
         )}
         {play && selectedTeam === "tm1" ? (
           <div>
-            <Table variant={"dark"} responsive hover className="mt-3">
+            <Table  hover className="mt-3">
               <thead>
                 <tr>
                   <th className="-2 text-center text-white fs-5">Batters</th>
@@ -138,7 +138,7 @@ const ScoreCard = () => {
               </tbody>
             </Table>
             <br />
-            <Table variant={"dark"} responsive hover className="mt-3">
+            <Table  responsive  className="mt-3">
               <thead>
                 <tr>
                   <th className="-2 text-center text-white fs-5">BOWLING</th>
@@ -191,25 +191,25 @@ const ScoreCard = () => {
 
                 <tr>
                   <td colSpan={8}>
-                    <span className="fw-bold me-3"> Extra: {firstInn?.Ex}</span>
-                    <span className="mx-3 ">
+                    <span className="fw-bold me-3 text-white"> Extra: {firstInn?.Ex}</span>
+                    <span className="mx-3 text-white">
                       {" "}
                       <span className="fw-bold"> B: </span>
                       {firstInn?.B}
                     </span>
-                    <span className="mx-3 ">
+                    <span className="mx-3 text-white">
                       {" "}
                       <span className="fw-bold"> LB: </span> {firstInn?.LB}
                     </span>{" "}
-                    <span className="mx-3 ">
+                    <span className="mx-3 text-white">
                       {" "}
                       <span className="fw-bold"> NB: </span> {firstInn?.NB}
                     </span>{" "}
-                    <span className="mx-3 ">
+                    <span className="mx-3 text-white">
                       {" "}
                       <span className="fw-bold"> WD: </span> {firstInn?.WB}
                     </span>{" "}
-                    <span className="mx-3 ">
+                    <span className="mx-3 text-white">
                       {" "}
                       <span className="fw-bold"> P: </span>
                       {firstInn?.Pen}

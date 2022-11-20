@@ -8,7 +8,7 @@
 }
 
 .news_body {
-  background-color: #111111;
+  background-color: var(--secondary-color);
   color: rgb(212, 212, 212);
 }
 
@@ -33,10 +33,10 @@
 .newsNav_link {
   text-decoration: none;
   font-size: 16px;
-  color: rgb(194, 194, 194);
+  color: var(--primary-color) !important;
   padding: 5px 15px;
   margin: 0px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.384);
+  border: 1px solid var(--primary-color);
   border-radius: 15px;
   transition: all 0.3s ease-in-out;
 }
@@ -45,18 +45,19 @@
     color: var(--optional-color);
 } */
 .active {
-  background-color: var(--secondary-color) !important;
+  background-color: var(--primary-color) !important;
   color: var(--optional-color) !important;
   font-weight: bold;
 }
 
+
 .single_card_wrapper {
-  background-color: #111111 !important;
+  background-color: var(--secondary-color) !important;
   transition: all 0.3s ease-in-out;
 }
 
 .single_card_wrapper:hover {
-  background-color: #222222 !important;
+  background-color: #1a4b83 !important;
   cursor: pointer;
 }
 
@@ -72,7 +73,10 @@
   text-decoration: underline;
 }
 
-
+.viewIcon{
+  font-size: 16px;
+  color: white;
+}
 
 /* responsive */
 @media (max-width: 575.98px) {
