@@ -1,0 +1,4 @@
+.footer_bg{
+    background-color: var(--optional-color);
+    color: var(--secondary-color) !important;
+}

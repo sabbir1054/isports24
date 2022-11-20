@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import Loader from "../../../Loader/Loader";
 import { api_key, cricket_news_id } from "../../../Shared/apikey";
+import IsportsCricketnews from "../isportsSpecial/CategorytypesNews/IsportsCricketnews";
 import CategoryWiseSingleCard from "./CategoryWiseSingleCard";
 
 const CricektNews = () => {
@@ -31,6 +32,7 @@ const CricektNews = () => {
 
   return (
     <div>
+      <IsportsCricketnews/>
       {data.length ? (
         <Row xs={1} md={2} className="g-2">
           {data?.map((item) => (

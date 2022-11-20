@@ -40,7 +40,6 @@ const DetailsNewsPage = () => {
     <div className={styles.newsDetails_wrapper}>
       <NavigationBar />
       <hr className="text-white" />
-
       <Container>
         <Row className="w-100 g-0">
           <Col lg={8}>
@@ -107,16 +106,7 @@ const DetailsNewsPage = () => {
           </Col>
         </Row>
       </Container>
-      <Row className="w-100">
-        <Col lg={8}>
-          {/* <Container> */}
-
-          {/* </Container> */}
-        </Col>
-        <Col lg={4}>
-          <Container></Container>
-        </Col>
-      </Row>
+    
     </div>
   );
 };

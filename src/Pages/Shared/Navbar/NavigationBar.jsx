@@ -32,7 +32,7 @@ const NavigationBar = () => {
             <NavLink to="/football/list-live">
               <img
                 alt=""
-                src="/assets/photos/logo.png"
+                src="/assets/photos/logo2.jpg"
                 width="250"
                 className="d-inline-block align-top img-fluid"
               />

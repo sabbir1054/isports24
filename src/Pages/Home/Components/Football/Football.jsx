@@ -1,4 +1,6 @@
+import axios from "axios";
 import React from "react";
+import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { football_news_id } from "../../../Shared/apikey";
 import NavigationBar from "../../../Shared/Navbar/NavigationBar";
@@ -6,6 +8,7 @@ import SideBarNews from "../SideBarNews/SideBarNews";
 import DateNavBar from "./DateNavbar/DateNavBar";
 import styles from "./Football.module.css";
 const Football = () => {
+  
   return (
     <div className={styles.wrapper}>
       <NavigationBar />
