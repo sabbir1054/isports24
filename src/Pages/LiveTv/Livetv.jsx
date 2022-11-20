@@ -4,11 +4,18 @@ import NavigationBar from "../Shared/Navbar/NavigationBar";
 const Livetv = () => {
   return (
     <div>
-      <div className={styles.newsWrapper}>
+      <div className={`${styles.newsWrapper} `}>
         <NavigationBar />
         <hr className="text-light" />
         <h1 className="display-1 text-center">Page is under construction</h1>
-        <img src="/assets/photos/construction.png" width={300} alt="" srcset="" />
+        <div className="d-flex justify-content-center">
+          <img
+            src="/assets/photos/construction.png"
+            width={300}
+            alt=""
+            srcset=""
+          />
+        </div>
       </div>
     </div>
   );
