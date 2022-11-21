@@ -25,8 +25,8 @@ const CategoryWiseSingleCard = ({ article }) => {
                 <h5 className={`card-title ${styles.categoryNews_title}`}>{article.title}</h5>
 
                 <p className="card-text">
-                  <small className="text-muted">
-                    <span className="me-2">Date: {dateTime[0]}</span> Time:
+                  <small className="text-white">
+                    <span className="me-2 text-white">Date: {dateTime[0]}</span> Time:
                     {dateTime[1].split("+")[0]}
                   </small>
                 </p>
