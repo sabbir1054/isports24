@@ -18,12 +18,13 @@ const IsportsCricketnews = () => {
       .then((res) => {
         const getCData = res.data.filter((item) => item.category == 1);
         setisports10(getCData);
-        console.log(res.data);
+        // console.log(getCData);
       })
       .catch((error) => {
         console.error(error);
       });
   }, []);
+  console.log(iSports10);
   return (
     <div>
       {" "}

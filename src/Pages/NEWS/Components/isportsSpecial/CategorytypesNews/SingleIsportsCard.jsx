@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
+import { AiFillEye } from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
 import styles from "../../../News.module.css"
 const SingleIsportsCard = ({data}) => {
@@ -29,6 +30,10 @@ const SingleIsportsCard = ({data}) => {
                       </span>{" "}
                       Time:
                       {data.uploaded.split("T")[1]}
+                      <span className="text-white mx-2">
+                        {" "}
+                        <AiFillEye className={styles.viewIcon} /> {data.view}
+                      </span>
                     </small>
                   </p>
                 </div>

@@ -17,15 +17,15 @@ const IsportsDetailsnews = () => {
     const access_token = "b123e083993d4e5a0898908e27b0118df728793f";
 
     axios
-      .get("https://api.isports24.net/api/all_content_api/", {
+      .get(`https://api.isports24.net/api/all_content_api/${id}`, {
         headers: {
           Authorization: `Token ${access_token}`,
         },
       })
       .then((res) => {
-        const getCData = res.data.filter((item) => item.id == id);
-        setisports10(getCData[0]);
-        // console.log(getCData);
+        // const getCData = res.data.filter((item) => item.id == id);
+        // setisports10(getCData[0]);
+        setisports10(res.data);
       })
       .catch((error) => {
         console.error(error);
