@@ -50,11 +50,11 @@ const MyTable = () => {
         console.error(error);
       });
   };
-
+  console.log(table);
   useEffect(() => {
     const options = {
       method: "GET",
-      url: "https://livescore6.p.rapidapi.com/matches/v2/get-scoreboard",
+      url: "https://livescore6.p.rapidapi.com/matches/v2/get-table",
       params: { Category: "soccer", Eid: eid },
       headers: {
         "X-RapidAPI-Key": api_key,
@@ -65,8 +65,10 @@ const MyTable = () => {
     axios
       .request(options)
       .then(function (response) {
-        // console.log(response.data.Stg.CompId);
-        if (response.data.Stg.CompId !== undefined) {
+        console.log(response.data);
+        // setTable(response.data.LeagueTable.L[0].Tables[0].team);
+        setPlay(true);
+        if (response.data !== undefined) {
           getTable(response.data.Stg.CompId);
         } else {
           setIsNotAvailable(true);
@@ -76,12 +78,7 @@ const MyTable = () => {
         console.error(error);
       });
   }, []);
-
-  if (wtable.length > 0) {
-    wtable.map((item) => {
-      console.log(item.LeagueTable.L[0].Tables[0].team);
-    });
-  }
+  console.log(eid);
   return (
     <div>
       {/* Not available massage */}
@@ -90,13 +87,12 @@ const MyTable = () => {
       ) : (
         ""
       )}
-
-      {compid == "54" ? (
+      {play && compid == "54" ? (
         <>
           {wtable.map((item) => (
             <>
-              <h4 className="text-center text-white">{item.Sdn }</h4>
-              <Table className="text-white my-2" responsive bordered>
+              {" "}
+              <Table className="text-white" responsive bordered>
                 <thead>
                   <th className="py-2">#</th>
                   <th>TEAM</th>
@@ -111,18 +107,18 @@ const MyTable = () => {
                 </thead>
                 <tbody>
                   {play ? (
-                    item.LeagueTable.L[0].Tables[0].team.map((item) => (
+                    item.LeagueTable.L[0].Tables[0].team((item2) => (
                       <tr>
-                        <td>{item.rnk}</td>
-                        <td>{item.Tnm}</td>
-                        <td>{item.pld}</td>
-                        <td>{item.win}</td>
-                        <td>{item.drw}</td>
-                        <td>{item.lst}</td>
-                        <td>{item.gf}</td>
-                        <td>{item.ga}</td>
-                        <td>{item.gd}</td>
-                        <td>{item.pts}</td>
+                        <td>{item2.rnk}</td>
+                        <td>{item2.Tnm}</td>
+                        <td>{item2.pld}</td>
+                        <td>{item2.win}</td>
+                        <td>{item2.drw}</td>
+                        <td>{item2.lst}</td>
+                        <td>{item2.gf}</td>
+                        <td>{item2.ga}</td>
+                        <td>{item2.gd}</td>
+                        <td>{item2.pts}</td>
                       </tr>
                     ))
                   ) : (
