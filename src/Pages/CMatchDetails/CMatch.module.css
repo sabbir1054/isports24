@@ -15,7 +15,7 @@
 /* info */
 
 .info_p:hover{
-  background-color: #222222;
+  background-color: var(--secondary-color);
   cursor:pointer
 }
 
