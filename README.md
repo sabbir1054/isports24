@@ -1,6 +1,6 @@
 ### ISPORTS24
 
-## Live link: hhttps://isports24.web.app/
+## Live link: https://isports24.web.app/
 ## Live link: https://isports24.net
 
 
