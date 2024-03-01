@@ -1,4 +1,4 @@
-const api_key = "e361785bd4msh987a752d6eb4926p1aee6fjsncfe1521f4798";
+const api_key = process.env.REACT_APP_BACKEND_KEY;
 const football_news_id = "2021020913320920836";
 const match_report = "2022081113203185684";
 const cricket_news_id = "2021020913321411486";
@@ -8,13 +8,12 @@ const world_cup = "2022102009232963173";
 const others = "2021020913515458219";
 export {
   api_key,
-  football_news_id,
-  cricket_news_id,
   champions_league,
-  transfer_news,
+  cricket_news_id,
+  football_news_id,
   match_report,
-  world_cup,
   others,
+  transfer_news,
+  world_cup,
 };
 /* 1dbd6ef1f8msh6f9f339238cf282p1748d7jsnfa3f07811a73 */
-

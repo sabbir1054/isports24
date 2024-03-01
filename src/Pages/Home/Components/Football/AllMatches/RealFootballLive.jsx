@@ -8,23 +8,35 @@ import styles from "../Football.module.css"
 
 
 const RealFootballLive = () => {
+  const [timeStatus, setTimeStatus] = useState('1');
   const [live, setLive] = useState(false);
   const [tm1, setTm1] = useState({});
   const [tm2, setTm2] = useState({});
 
   // get real data
   useEffect(() => {
+
     const footballCollectRef = collection(db, "football");
     const footballInfo = onSnapshot(footballCollectRef, (snapshot) => {
       // console.log(snapshot.docs[0].data());
       const liveStatus = snapshot.docs[0].data();
       const team1Data = snapshot.docs[1].data();
       const team2Data = snapshot.docs[2].data();
+      
       setLive(liveStatus.live);
       setTm1(team1Data);
       setTm2(team2Data);
     });
+    const timeUpdatedCollecRef = collection(db, "time_update");
+    const timeInfo = onSnapshot(timeUpdatedCollecRef, (snapshot) => {
+      console.log(snapshot.docs[0].data());
+    })
+
   }, []);
+
+  /* time count down */
+  
+
 //   console.log(tm1);
   return (
     <div>
