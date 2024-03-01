@@ -4,8 +4,12 @@ import { Col, Container, Row } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import SideBarNews from "../../../Home/Components/SideBarNews/SideBarNews";
 import Loader from "../../../Loader/Loader";
-import { api_key, cricket_news_id, football_news_id } from "../../../Shared/apikey";
 import NavigationBar from "../../../Shared/Navbar/NavigationBar";
+import {
+  api_key,
+  cricket_news_id,
+  football_news_id,
+} from "../../../Shared/apikey";
 import styles from "../../News.module.css";
 const CategoryNewsDetails = () => {
   const [play, setPlay] = useState(false);
@@ -13,12 +17,10 @@ const CategoryNewsDetails = () => {
   const location = useLocation();
   const ids = location.pathname.split("/")[3].split("-");
 
-
   const makeData = (x) => {
     const filter = x.filter((item) => item.id == ids[1]);
     setNews(filter[0]);
     setPlay(true);
-
   };
 
   /* get data */
@@ -42,9 +44,10 @@ const CategoryNewsDetails = () => {
         console.error(error);
       });
   }, []);
-if (play) {
-    console.log(news);
-}
+  if (play) {
+    console.log("my_news", news);
+  }
+  console.log("my_news", news);
   return (
     <div className="bg-dark">
       <div>
@@ -98,13 +101,11 @@ if (play) {
                     ) : (
                       <SideBarNews id={football_news_id} />
                     )}
-                 
                   </Container>
                 </Col>
               </Row>
             </Container>
           ) : (
-           
             <Loader />
           )}
         </div>

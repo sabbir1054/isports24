@@ -10,7 +10,7 @@ import Cricket from "./Pages/Home/Components/Cricket/Cricket";
 import Football from "./Pages/Home/Components/Football/Football";
 import Livetv from "./Pages/LiveTv/Livetv";
 import CategoryNewsDetails from "./Pages/NEWS/Components/Category/CategoryNewsDetails";
-import IsportsDetailsnews from "./Pages/NEWS/Components/isportsSpecial/CategorytypesNews/IsportsDetailsnews";
+// import IsportsDetailsnews from "./Pages/NEWS/Components/isportsSpecial/CategorytypesNews/IsportsDetailsnews";
 import DetailsNewsPage from "./Pages/NEWS/DetailsNewsPage";
 import NewsPage from "./Pages/NEWS/NewsPage";
 import NotFound from "./Pages/NotFound/NotFound";
@@ -22,13 +22,13 @@ function App() {
 
   // get real data
   useEffect(() => {
-    const triggerRef = collection(db, "site_trigger");
-    const triggerInfo = onSnapshot(triggerRef, (snapshot) => {
-      // console.log(snapshot.docs[0].data());
-      const liveStatus = snapshot.docs[0].data();
-      setLive(liveStatus.status);
-      console.log(liveStatus.status);
-    });
+    // const triggerRef = collection(db, "site_trigger");
+    // const triggerInfo = onSnapshot(triggerRef, (snapshot) => {
+    //   // console.log(snapshot.docs[0].data());
+    //   const liveStatus = snapshot.docs[0].data();
+    //   setLive(liveStatus.status);
+    //   console.log(liveStatus.status);
+    // });
   }, []);
 
   return (
@@ -54,10 +54,10 @@ function App() {
           <Route path="/news/transfer_news" element={<NewsPage />} />
           <Route path="/news/others_news" element={<NewsPage />} />
           <Route path="/news/category/:id" element={<CategoryNewsDetails />} />
-          <Route
+          {/* <Route
             path="/isportsnews/details/:id"
             element={<IsportsDetailsnews />}
-          />
+          /> */}
           <Route path="/liveTv" element={<Livetv />} />
           <Route
             path="/football/matchDetails/:eventIDtabName"

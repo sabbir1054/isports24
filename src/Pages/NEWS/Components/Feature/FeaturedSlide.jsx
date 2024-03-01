@@ -51,13 +51,13 @@ const FeaturedSlide = ({ allArticle }) => {
   return (
     <div className="px-3 my-3">
       <h3 className="text-center">Top Stories</h3>
-      <Slider {...settings}>
+      {/* <Slider {...settings}>
         {allArticle.length ? (
           allArticle?.map((item) => <SingleFeature article={item} id={item.id } />)
         ) : (
           <Loader />
         )}
-      </Slider>
+      </Slider> */}
     </div>
   );
 };

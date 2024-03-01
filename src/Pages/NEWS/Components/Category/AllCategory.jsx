@@ -7,12 +7,13 @@ const AllCategory = ({ news }) => {
   /* news?.map((item) => {
     item.articles?.map((i) => console.log(i));
   }); */
+  console.log("me",news[0].articles);
   return (
     <div>
-      <AllTypesNewsIsports/>
+      {/* <AllTypesNewsIsports/> */}
       <Row xs={1} md={2} className="g-2">
         {news?.map((item) =>
-            item.articles?.map((article) => <SinglenewsCard article={article} key={article.id } />)
+            item.articles?.map((article) => <SinglenewsCard article={article} key={article?.id } />)
         )}
       </Row>
     </div>

@@ -68,7 +68,7 @@ const DetailsNewsPage = () => {
                 </div>
                 <div className="d-flex justify-content-center">
                   <img
-                    src={`${data?.article?.mainMedia?.article?.url}`}
+                    src={`${data?.article?.mainMedia[0]?.article?.url}`}
                     className={`img-fluid rounded ${styles.news_img}`}
                     alt=""
                     srcset=""

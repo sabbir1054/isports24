@@ -22,16 +22,7 @@ const NewsPage = () => {
   const [newsCategory, setNewsCategory] = useState(
     `${location.pathname.split("/")[2]}`
   );
-  // const [footballNews, setFootballNews] = useState([]);
-  // const [cricketNews, setCricketNews] = useState([]);
 
-  // const devidedNewsCategoryWise = () => {
-  //   const fData = allNews.filter((item) => item.category.title === "football");
-  //   const cData = allNews.filter((item) => item.category.title === "cricket");
-
-  //   // setFootballNews(fData);
-  //   // setCricketNews(cData);
-  // };
 
   /* Fetch data */
   useEffect(() => {
@@ -50,7 +41,7 @@ const NewsPage = () => {
         setTopStoriesData(response.data.topStories);
         setAllNews(response.data.homepageArticles);
         // devidedNewsCategoryWise();
-        console.log(response.data);
+        console.log("response=",response.data.homepageArticles);
       })
       .catch(function (error) {
         console.error(error);
@@ -73,7 +64,7 @@ const NewsPage = () => {
         <Container className="border border-secondary rounded">
           <NewsNav func={getNewsCategory} />
           <hr className="text-white" />
-          {allNews.length > 0 ? (
+          {allNews?.length > 0 ? (
             <div>
               <div className="newsSection">
                 {newsCategory === "all" ? (

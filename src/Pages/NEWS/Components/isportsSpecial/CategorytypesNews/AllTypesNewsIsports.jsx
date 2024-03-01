@@ -27,9 +27,9 @@ const AllTypesNewsIsports = () => {
     return (
       <div>
         <Row xs={1} md={2} className="g-2">
-          {iSports10?.map((item) => (
+         {/*  {iSports10?.map((item) => (
             <IsportsSingleNews data={item} />
-          ))}
+          ))} */}
         </Row>
       </div>
     );

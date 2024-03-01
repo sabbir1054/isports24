@@ -3,7 +3,7 @@ import { Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import styles from "../../News.module.css"
 const SinglenewsCard = ({ article }) => {
-  // console.log(article);
+  console.log("article",article);
   const newUrl = article.url.split("/")[4];
   const dateTime = article.publishedAt.split("T");
   return (
@@ -17,7 +17,7 @@ const SinglenewsCard = ({ article }) => {
             <div className="col-md-5">
               <img
                 className="img-fluid rounded-start"
-                src={`${article.mainMedia.gallery.url}`}
+                src={`${article.mainMedia[0].gallery.url}`}
                 alt=""
               />
             </div>
